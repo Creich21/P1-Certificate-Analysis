@@ -1,2 +1,3 @@
-ssl
-socket
+requests
+fake_headers
+json

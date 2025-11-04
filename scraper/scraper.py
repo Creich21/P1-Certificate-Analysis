@@ -1,4 +1,4 @@
-import socket, ssl, requests
+import requests
 from fake_headers import Headers
 
 # REMOVE AND CHANGE WITH THE DATA WE GET FROM PUNKTUM.DK
@@ -23,21 +23,29 @@ class Scraper():
         ).generate()
 
     def scrape(self):
+        header_list = []
         # CHANGE LOOP VARIABLE TO DOMAINS FROM PUNKTUM.DK DATA 
         for i in range(len(self.webpages)):
-
-            print(webpages[i])
-
             # fetch the webpage, 
             response = requests.get(webpages[i],self.header_props)
             if response.status_code == 200:
-                # CHANGE TO STORE SOMEWHERE INSTEAD OF PRINTING
-                print(response.headers)
+                #print(response.headers)
+                # TODO:
+                # figure out why every entry starts with _store
+                header_list.append(response.headers.__dict__)
             else:
+                # add some error thingy if website is down. dunno what yet
+                header_list.append("")
                 print("website", webpages[i], "returned error", requests.status_code)
+
+        return header_list
 
 
 # debugging
 if __name__ == "__main__":
     scraper = Scraper(webpages=webpages)
-    scraper.scrape()
+    h_list = scraper.scrape()
+    print(h_list)
+    #f = open("test.json", "w")
+    #json.dump(h_list, f, indent=4)
+    

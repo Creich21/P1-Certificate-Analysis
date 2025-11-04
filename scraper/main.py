@@ -1,18 +1,31 @@
-from parser import Parser
+import json
 from scraper import Scraper
 
 '''
     TODO:
-    create parser init and parse method so it can account for files
-    parse the domains from the file into a python-friendly format (e.g. array)
-    flesh out looping in scraper, save to something
-    could be in dictionary to allow easy saving
+    append header information to "original" dataset
+    save somewhere (easy to do)
 '''
 
+# load json into python
+def parse_json(file):
+    json_list = json.load(file)
+    return json_list
 
-# UPDATE ARGUMENTS WHEN WE HAVE FILE
-parser = Parser(None)
-webpages_list = parser.parse()
+# create array of domains
+# CHANGE KEY WHEN IS KNOWN
+def fetch_domains(json_list):
+    domain_list = [d["domain"] for d in json_list]
+    return domain_list
 
+
+'''
+SCRAPER:
+constructor args:
+list of webpages
+
+scrape method:
+returns list of dicts (list of headers)
+'''
 scraper = Scraper(None)
 scraper.scrape()
