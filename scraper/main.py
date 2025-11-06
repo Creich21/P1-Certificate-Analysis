@@ -1,4 +1,5 @@
 import json
+import pandas as pd
 from scraper import Scraper
 
 '''
@@ -21,7 +22,7 @@ def fetch_domains(json_list):
 #
 def add_headers(headers_list, original_dataset):
     # lookup table (dict)
-    headers_lookup = {h['domain']: h['headers'] for h in headers_list]}
+    headers_lookup = {h['domain']: h['headers'] for h in headers_list}
 
     merged = []
 
@@ -31,13 +32,29 @@ def add_headers(headers_list, original_dataset):
         # check if domain is in scraped dicts
         if domain in headers_lookup:
             # create new dict with all fields from og entry, add headers
-            combined_dict = {**entry, 'headers':headers_lookup[domain])}
+            combined_dict = {**entry, 'headers':headers_lookup[domain]}
             merged.append(combined_dict)
         else:
             # if no entry in lookup table, create one with empty value
             merged.append({**entry, 'headers': None})
             
     return merged        
+
+
+webpages_list = []
+webpages_df = pd.read_csv("AUU_projekt.csv", usecols=['Domæne'])
+cnt = 0
+for row in webpages_df.itertuples():
+    temp_str = ""
+    if not row[1].startswith("http://") or not row[1].startswith("https://"):
+        temp_str += "http://"
+    temp_str += row[1]
+    webpages_list.append(temp_str)
+    if cnt % 10000 == 0:
+        print(cnt)
+    cnt += 1
+    
+
 
 '''
 SCRAPER:
@@ -47,5 +64,5 @@ list of webpages
 scrape method:
 returns list of dicts (list of headers)
 '''
-scraper = Scraper(None)
+scraper = Scraper(webpages_list)
 scraper.scrape()

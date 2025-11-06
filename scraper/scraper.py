@@ -34,8 +34,6 @@ class Scraper():
             try:
                 response = requests.get(self.webpages[i],headers=self.header_props)
                 if response.status_code == 200:
-                    # TODO:
-                    # figure out why every entry starts with _store
                     res_dict['headers'] = response.headers.__dict__['_store']
             except:
                 # add some error thingy if website is down. dunno what yet
