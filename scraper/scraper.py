@@ -35,6 +35,7 @@ class Scraper():
                 response = requests.get(self.webpages[i],headers=self.header_props)
                 if response.status_code == 200:
                     res_dict['headers'] = response.headers.__dict__['_store']
+                    print("website", self.webpages[i], "UPan gangnam style!!!")
             except:
                 # add some error thingy if website is down. dunno what yet
                 # for now i think empty is fine
