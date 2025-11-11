@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 from scraper import Scraper
+from crtsh import crtshAPI
 
 '''
     TODO:
@@ -41,19 +42,28 @@ def add_headers(headers_list, original_dataset):
     return merged        
 
 
-webpages_list = []
-webpages_df = pd.read_csv("AUU_projekt.csv", usecols=['Domæne'])
+dict_list = []
+webpages_df = pd.read_csv("AUU_projekt.csv")
+#index 2 = urls
 cnt = 0
-for row in webpages_df.itertuples():
-    temp_str = ""
-    if not row[1].startswith("http://") or not row[1].startswith("https://"):
-        temp_str += "http://"
-    temp_str += row[1]
-    webpages_list.append(temp_str)
+
+'''
+put csv entry (row) into json/dict
+get domain name from dict
+check crt.sh for this domain name
+put response into field in dict that contains cert info
+put dict into array
+'''
+
+for row in webpages_df.itertuples(index=false, name=None):
+    temp_dict = row.to_dict()
+
+    
     if cnt % 10000 == 0:
         print(cnt)
     cnt += 1
-    
+
+print(json.dumps(crtshAPI().search('')))
 
 
 '''
@@ -64,5 +74,5 @@ list of webpages
 scrape method:
 returns list of dicts (list of headers)
 '''
-scraper = Scraper(webpages_list)
-scraper.scrape()
+#scraper = Scraper(webpages_list)
+#scraper.scrape()

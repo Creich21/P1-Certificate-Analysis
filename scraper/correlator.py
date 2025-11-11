@@ -15,6 +15,7 @@ for chunk in pd.read_csv("AUU_projekt.csv", chunksize=10000):
     # if domain is in blocklist, merge the two entries
     if not matched_chunk.empty:
         merged = matched_chunk.merge(blocklist_df, left_on="Domæne", right_on="domain_name", suffixes=("_csv", "_json"))
+        
         # remove field from new dict (this one is duplicate
         # to remove others, just add the key name to the array
         merged = merged.drop(columns=["domain_name"])
