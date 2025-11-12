@@ -1,5 +1,5 @@
 import json
-import pandas as pd
+from csv import DictReader, DictWriter
 from scraper import Scraper
 from crtsh import crtshAPI
 
@@ -42,29 +42,57 @@ def add_headers(headers_list, original_dataset):
     return merged        
 
 
-dict_list = []
-webpages_df = pd.read_csv("AUU_projekt.csv")
-#index 2 = urls
+#webpages_df = pd.read_csv("AUU_projekt.csv")
 cnt = 0
 
+with open("AUU_projekt.csv", 'r', encoding="utf8") as f:
+    dict_reader = DictReader(f)
+    dict_list = list(dict_reader)
+    
 '''
-put csv entry (row) into json/dict
-get domain name from dict
+put csv entry (row) into json/dict done
+get domain name from dict key domæne
 check crt.sh for this domain name
 put response into field in dict that contains cert info
 put dict into array
 '''
 
-for row in webpages_df.itertuples(index=false, name=None):
-    temp_dict = row.to_dict()
+fields_list = list(dict_list[0].keys())
+fields_list.append("Certifikat")
 
+cert_dict_list = []
+
+with open("blocked_with_certs.csv", 'a', encoding="utf8", newline='') as csvfile:
+    fieldnames = fields_list
+    writer = DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()    
     
-    if cnt % 10000 == 0:
-        print(cnt)
-    cnt += 1
+    for row in dict_list:
+        # status report
+        if cnt % 100 == 0:
+            print(cnt)
+            writer.writerows(cert_dict_list)
+            cert_dict_list = []
+        cnt += 1
 
-print(json.dumps(crtshAPI().search('')))
+        
+        # search crt.sh for current domain
+        res = json.dumps(crtshAPI().search(row["Domæne"]))
+        # create dict copying fields from row
+        temp_dict = {**row}
 
+        # there is a cert, add it to the field. otherwise add an empty array for now
+        # the placecholder empty value should be something else
+        # when domains didn't have a cert on crt, it usually just returned an empty array
+        # a few of them did return "null" though
+        # i really do not like the solution below, but dont really care about
+        # figuring it completely out
+        if res == "[]":
+            continue
+
+        temp_dict["Certifikat"] = res
+
+        cert_dict_list.append(temp_dict)
 
 '''
 SCRAPER:
