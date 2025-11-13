@@ -41,13 +41,13 @@ def add_headers(headers_list, original_dataset):
             
     return merged        
 
+cnt = 1
 
-#webpages_df = pd.read_csv("AUU_projekt.csv")
-cnt = 0
 
-with open("AUU_projekt.csv", 'r', encoding="utf8") as f:
+with open("filtered_tranco_dataset.csv", 'r', encoding="utf8") as f:
     dict_reader = DictReader(f)
     dict_list = list(dict_reader)
+    print(dict_list[0])
     
 '''
 put csv entry (row) into json/dict done
@@ -58,20 +58,26 @@ put dict into array
 '''
 
 fields_list = list(dict_list[0].keys())
-fields_list.append("Certifikat")
 
 cert_dict_list = []
+no_cert_dict_list = []
 
-with open("blocked_with_certs.csv", 'a', encoding="utf8", newline='') as csvfile:
-    fieldnames = fields_list
-    writer = DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()    
+no_certs_csv = open("popular_no_certs.csv", 'a', encoding="utf8", newline='')
+with open("popular_with_certs.csv", 'a', encoding="utf8", newline='') as certs_csv:
+    unblocked_writer = DictWriter(no_certs_csv, fieldnames=fields_list)
+    fields_list.append("Certifikat")
+    blocked_writer = DictWriter(certs_csv, fieldnames=fields_list)
+
+    unblocked_writer.writeheader()
+    blocked_writer.writeheader()    
     
     for row in dict_list:
         # status report
         if cnt % 100 == 0:
             print(cnt)
-            writer.writerows(cert_dict_list)
+            blocked_writer.writerows(cert_dict_list)
+            unblocked_writer.writerows(no_cert_dict_list)
+            no_cert_dict_list = []
             cert_dict_list = []
         cnt += 1
 
@@ -88,7 +94,7 @@ with open("blocked_with_certs.csv", 'a', encoding="utf8", newline='') as csvfile
         # i really do not like the solution below, but dont really care about
         # figuring it completely out
         if res == "[]":
-            continue
+            no_cert_dict_list.append({**row})
 
         temp_dict["Certifikat"] = res
 
