@@ -1,0 +1,47 @@
+{
+    "items": [
+        {
+            "highlight": {
+                "stats.parser": "no_error"
+            },
+            "data": {
+                "server": "whois.dk-hostmaster.dk",
+                "extension": "dk",
+                "last_updated": "2024-07-10T17:30:09.501Z",
+                "registrar": {
+                    "name": "Eurodns S.A"
+                },
+                "level": 2,
+                "name_servers": [
+                    "madamblue.dk"
+                ],
+                "expiration_date": "2025-04-25T00:00:00.000Z",
+                "@timestamp": "2024-07-10T17:30:09.501Z",
+                "punycode": "madamblue.dk",
+                "zone": "dk",
+                "stats": {
+                    "retries": 0,
+                    "quota_retries": 0,
+                    "parser": "no_error",
+                    "was_queued": true,
+                    "error": "no_error",
+                    "total_time": 2103059507
+                },
+                "domain": "madamblue.dk",
+                "name": "madamblue",
+                "registrant": {
+                    "country": "GE",
+                    "city": "Tbilisi",
+                    "street": "203 Nutsubidze Str.",
+                    "name": "Sergi Avaliani"
+                },
+                "created_date": "2024-04-26T00:00:00.000Z",
+                "extracted_domain": "madamblue.dk",
+                "status": [
+                    "active"
+                ]
+            },
+            "index_id": 13810
+        }
+    ]
+}
