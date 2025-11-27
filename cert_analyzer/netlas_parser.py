@@ -27,6 +27,8 @@ from .models.results import (
 )
 
 from .analysis.basic_analysis import compute_certificate_features
+import csv
+from pathlib import Path
 
 
 def _parse_name_entity(obj: Dict[str, Any]) -> NameEntity:
@@ -177,6 +179,7 @@ def _parse_certificate(cert: Dict[str, Any]) -> Certificate:
     )
 
     certificate.features = compute_certificate_features(certificate)
+
 
     return certificate
 

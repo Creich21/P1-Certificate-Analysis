@@ -157,6 +157,10 @@ ENV/
 env.bak/
 venv.bak/
 
+cert_analyzer/venv/
+data/
+
+
 # Spyder project settings
 .spyderproject
 .spyproject

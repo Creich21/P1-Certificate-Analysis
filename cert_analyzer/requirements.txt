@@ -1,2 +1,4 @@
 netlas
 python-dotenv
+pandas
+pathlib
