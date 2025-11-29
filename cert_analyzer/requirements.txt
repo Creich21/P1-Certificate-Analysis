@@ -2,3 +2,4 @@ netlas
 python-dotenv
 pandas
 pathlib
+colorama

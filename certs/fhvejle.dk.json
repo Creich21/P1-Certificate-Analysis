@@ -1,0 +1,478 @@
+[
+  {
+    "highlight": {
+      "certificate_subject_dn": null
+    },
+    "data": {
+      "last_updated": "2025-04-04T20:53:38.898Z",
+      "timestamp": "2025-04-04T20:53:38.898Z",
+      "certificate": {
+        "issuer_dn": "C=US, O=Let's Encrypt, CN=R11",
+        "subject_dn": "CN=fhvejle.dk",
+        "serial_number": "561265604613842759653990877665681102325154",
+        "version": 3,
+        "validation_level": "DV",
+        "src": "https://www.fhvejle.dk:443/",
+        "redacted": false,
+        "subject": {
+          "country": null,
+          "organization": null,
+          "common_name": [
+            "fhvejle.dk"
+          ]
+        },
+        "issuer": {
+          "country": [
+            "US"
+          ],
+          "organization": [
+            "Let's Encrypt"
+          ],
+          "common_name": [
+            "R11"
+          ]
+        },
+        "fingerprints": {
+          "md5": "333af2d9635fb9397f732654102a1356",
+          "sha1": "a65a9a870085e602cc48a01cc43423ceed802ccc",
+          "sha256": "b974fef0e4ca83b8f1dc1ba532111835d6b597a5cbbf041fae07a38dc3435fed",
+          "tbs": "cdbe31c30d8562a4289387cc7a6ee378363f48d8abe5b094db71f9b6f16e9671",
+          "tbs_noct": "d63ad963eaa6a4aac99f9c29a59c77dd3f7e0e93a6d0a0a61267ce28dcff35bb",
+          "spki_subject": "4565b685aefb82d5fea816f12934cc57e39bf96edba04b593609a0e63c69a319"
+        },
+        "signature": {
+          "valid": false,
+          "signature_algorithm": {
+            "name": "SHA256-RSA",
+            "oid": "1.2.840.113549.1.1.11"
+          },
+          "value": "B5N0GyhUSxALglfaH+6k2Bb4M/vpuD37zS7KEe+x6dcrQMtMY1Ejtt3oWmzjyeAN7VfZ4k2EHg91R1VQyWhyT6bdEATaqe4PyvC92+CjtyZzvjTSXRJ8/KCFwULS9q1ZZGKxCaZJqmwc1Qg4+sTzkfAOqi26JmVsmzgzy5quLtKPNbCtsLj0IL8LLlTkPJFeCBguMu1l/FaBv1vgwrR9n4r5jh5YUJ8KkAJYJOCfWWJwlv0fTm4iUy61WH1Z890989Z7+GTNB8g5k2v7x0gCw1h3Pm73lqwdlFqXWDeuDPaRNsqt5/z+JKLTd6scaTVcAqk/LOiFesb65+RjrObjWw==",
+          "self_signed": false
+        },
+        "signature_algorithm": {
+          "name": "SHA256-RSA",
+          "oid": "1.2.840.113549.1.1.11"
+        },
+        "validity": {
+          "length": 7775999,
+          "start": "2025-03-27T17:52:08Z",
+          "end": "2025-06-25T17:52:07Z"
+        },
+        "extensions": {
+          "crl_distribution_points": [
+            "http://r11.c.lencr.org/35.crl"
+          ],
+          "subject_key_id": "d44615d5e1e0bfbc5858107bb7a75cc428066a3d",
+          "certificate_policies": [
+            {
+              "id": "2.23.140.1.2.1"
+            }
+          ],
+          "key_usage": {
+            "digital_signature": true,
+            "certificate_sign": null,
+            "crl_sign": null,
+            "key_encipherment": true,
+            "value": 5
+          },
+          "authority_key_id": "c5cf46a4eaf4c3c07a6c95c42db05e922f26e3b9",
+          "authority_info_access": {
+            "issuer_urls": [
+              "http://r11.i.lencr.org/"
+            ]
+          },
+          "basic_constraints": {
+            "is_ca": false,
+            "max_path_len": null
+          },
+          "extended_key_usage": {
+            "client_auth": true,
+            "server_auth": true
+          },
+          "subject_alt_name": {
+            "dns_names": [
+              "fhvejle.dk",
+              "www.fhvejle.dk"
+            ]
+          },
+          "signed_certificate_timestamps": [
+            {
+              "log_id": "ouMK5EXvva2bfjjtR2d3U9eCW4SU1yteGyzEuVCkR+c=",
+              "signature": "BAMARzBFAiB+h3k8pdx8iPh73JgxQzLiA+Yz66ZJxNbiJi/XQuFqtQIhAPlMHtPOOoEk86rBTFgYbZWBaEZiL+0EkvnPbrK8PVmo",
+              "version": 0,
+              "timestamp": 1743101439
+            },
+            {
+              "log_id": "E0rfGrWYQgl4DG/vTHqRpBa3I0nOWFdq367ap8Kr4CI=",
+              "signature": "BAMASDBGAiEAnK58AsUWfSwh/6QtImfVqgkeVMj0L9EkFW3HWJeE3UUCIQDA2idnaZx+4OFIAz1tWN+riSXsuWltfosXtZGOSvoTFQ==",
+              "version": 0,
+              "timestamp": 1743101441
+            }
+          ],
+          "extra": null
+        },
+        "names": [
+          "fhvejle.dk",
+          "www.fhvejle.dk"
+        ],
+        "chain": [
+          {
+            "issuer_dn": "C=US, O=Internet Security Research Group, CN=ISRG Root X1",
+            "subject_dn": "C=US, O=Let's Encrypt, CN=R11",
+            "serial_number": "184083759606652600789093070426744763640",
+            "version": 3,
+            "validation_level": "DV",
+            "src": null,
+            "redacted": false,
+            "subject": {
+              "country": [
+                "US"
+              ],
+              "organization": [
+                "Let's Encrypt"
+              ],
+              "common_name": [
+                "R11"
+              ]
+            },
+            "issuer": {
+              "country": [
+                "US"
+              ],
+              "organization": [
+                "Internet Security Research Group"
+              ],
+              "common_name": [
+                "ISRG Root X1"
+              ]
+            },
+            "fingerprints": {
+              "md5": "2fac04553147f46a49df9b4ebea6df43",
+              "sha1": "696db3af0dffc17e65c6a20d925c5a7bd24dec7e",
+              "sha256": "591e9ce6c863d3a079e9fabe1478c7339a26b21269dde795211361024ae31a44",
+              "tbs": "2aae3fb7bf05e4c81c4194dca44511d4f9af304786ec1ae7218409cf62a08355",
+              "tbs_noct": "2aae3fb7bf05e4c81c4194dca44511d4f9af304786ec1ae7218409cf62a08355",
+              "spki_subject": "86e9eeb01e9ebed3fb1da0516b5ae132dccf15aac3bd392e9f6f66594ab6c338"
+            },
+            "signature": {
+              "valid": false,
+              "signature_algorithm": {
+                "name": "SHA256-RSA",
+                "oid": "1.2.840.113549.1.1.11"
+              },
+              "value": "TuKJXQoDHJA40PUf+XFc+MOPsjeIem+wJR/tvrfYhgaO6QmEzXK/gfP8ys9TSO299mlC1KURPjXIE7KSHQVf6i7U2PhJw631mZac7ybY4bQkC0ggTfzTVLSpxiHI4TYb/3dkKRe58EvvXerNedC/kL++I7KQ2kqpSDF0qUQL4eL2LYNxpHV70pTBBRlGHLmP88R0SCUqDeX120Pi25ObuRm0Hy/fag6PMdNjD7sp3N1mLD+wG2dR+EE85E25rLiknGZj9auFIx3MU7arca7cxQFx2jbuChgqMv0JMXyP9nPnnJy1ShVqd4Jaz9qNRf4fKmQFMD5zwsYMudY7Y0qrRgP+mcBGQCdgY99QOgdH2BVKn+pHH5laCGIMtmwzCE3XOO1ILS4FaK6AXe9M3NggQV9o8btazeMOsAwxh5tD3klD4cgEP9E8G4dFMGmoqXIOeRIcMdg+I1fdp0+g8ByB0Xcfb9bSuaizAxaBOUufVa7SauSzv+ql1Z9Lo8nWO3LzSvZUqwz8OPdggN9uNcp1oVTkL7xuF8kapTe1opq67PTAdUZPd6joWVaRZi1u3imB1qaXBV5kRb4szupkQkSww0+t8LTcA8qZmwmClYINY4pm+Rly+NW5iRDiiZgJNfmiHL6ScyN06Z0f1ztKmoRYEMLzp+I17H47Rc4wRlJrwMA=",
+              "self_signed": false
+            },
+            "signature_algorithm": {
+              "name": "SHA256-RSA",
+              "oid": "1.2.840.113549.1.1.11"
+            },
+            "validity": {
+              "length": 94607999,
+              "start": "2024-03-13T00:00:00Z",
+              "end": "2027-03-12T23:59:59Z"
+            },
+            "extensions": {
+              "crl_distribution_points": [
+                "http://x1.c.lencr.org/"
+              ],
+              "subject_key_id": "c5cf46a4eaf4c3c07a6c95c42db05e922f26e3b9",
+              "certificate_policies": [
+                {
+                  "id": "2.23.140.1.2.1"
+                }
+              ],
+              "key_usage": {
+                "digital_signature": true,
+                "certificate_sign": true,
+                "crl_sign": true,
+                "key_encipherment": null,
+                "value": 97
+              },
+              "authority_key_id": "79b459e67bb6e5e40173800888c81a58f6e99b6e",
+              "authority_info_access": {
+                "issuer_urls": [
+                  "http://x1.i.lencr.org/"
+                ]
+              },
+              "basic_constraints": {
+                "is_ca": true,
+                "max_path_len": 0
+              },
+              "extended_key_usage": {
+                "client_auth": true,
+                "server_auth": true
+              },
+              "subject_alt_name": null,
+              "signed_certificate_timestamps": null,
+              "extra": null
+            },
+            "names": null,
+            "chain": null,
+            "features": {
+              "days_until_expiry": 470,
+              "valid_time_so_far_days": 624,
+              "has_expired": false,
+              "serial_number_length": 39,
+              "num_san_dns_names": 0,
+              "san_has_wildcard_dns": false,
+              "san_has_exact_subdomain_dns": false,
+              "is_trusted_certificate": true,
+              "key_cert_sign": true
+            }
+          }
+        ],
+        "features": {
+          "days_until_expiry": -156,
+          "valid_time_so_far_days": 245,
+          "has_expired": true,
+          "serial_number_length": 42,
+          "num_san_dns_names": 2,
+          "san_has_wildcard_dns": false,
+          "san_has_exact_subdomain_dns": true,
+          "is_trusted_certificate": false,
+          "key_cert_sign": null
+        }
+      }
+    },
+    "index_id": 4547,
+    "domain": "fhvejle.dk"
+  },
+  {
+    "highlight": {
+      "certificate_subject_dn": null
+    },
+    "data": {
+      "last_updated": "2025-01-28T04:24:44.970Z",
+      "timestamp": "2025-01-28T04:24:44.970Z",
+      "certificate": {
+        "issuer_dn": "C=US, O=Let's Encrypt, CN=R10",
+        "subject_dn": "CN=fhvejle.dk",
+        "serial_number": "332989373693909586898546845733801839902869",
+        "version": 3,
+        "validation_level": "DV",
+        "src": "https://www.fhvejle.dk:443/",
+        "redacted": false,
+        "subject": {
+          "country": null,
+          "organization": null,
+          "common_name": [
+            "fhvejle.dk"
+          ]
+        },
+        "issuer": {
+          "country": [
+            "US"
+          ],
+          "organization": [
+            "Let's Encrypt"
+          ],
+          "common_name": [
+            "R10"
+          ]
+        },
+        "fingerprints": {
+          "md5": "15cd9ad3292e283255872c96c2637e73",
+          "sha1": "830261b3f2b8652d1d48b7e347d57f1f139cb8c9",
+          "sha256": "3429611cb2b4d0d748fdd0130242938179e238c4d7cdc19e1227379266467c09",
+          "tbs": "a6418612e12de9a6912ffff665d64aad3a733756c0f79a3b85b11043509092da",
+          "tbs_noct": "43ad1a44457a5fb8c6e44088d392fb39f10440cb33aecd1f9b33ca99218fccf2",
+          "spki_subject": "360ec991b7a39c2e391aa8ca677742d8b65e117fe21acf3716ef1a1596bc6a09"
+        },
+        "signature": {
+          "valid": false,
+          "signature_algorithm": {
+            "name": "SHA256-RSA",
+            "oid": "1.2.840.113549.1.1.11"
+          },
+          "value": "wF6c2ogD/IT0an8zgCPZXGrw+8/p0KX/LgwaX8I0ny0I3rNhCAwblPvDN2wKPcuH3Z9sBhWDdf1TcF97Plu5SUwKqZnczbA8zkhbPGg+VTK09JI4H3z9eBjDq1KxwVUlHxE6Sbnt8tBI677f4QWE0HMtOnQSczvozfW+8XmZE01f1Bx8q9vjYIEgMEeaTVbV5ReYghOF0zbGtna5ij9fuXMrkYdiZdOVsYC7bD7M8phWAFrEWW98N8GqSEHSsQtq+ncvOsiq8ULZtMp7REgYmgHgojisRGs6SDc4mY5tMslRT8JRH3yueNyxl4YPhy/zATSTIgFr8lqDNTU0TrrKZQ==",
+          "self_signed": false
+        },
+        "signature_algorithm": {
+          "name": "SHA256-RSA",
+          "oid": "1.2.840.113549.1.1.11"
+        },
+        "validity": {
+          "length": 7775999,
+          "start": "2025-01-26T18:42:10Z",
+          "end": "2025-04-26T18:42:09Z"
+        },
+        "extensions": {
+          "crl_distribution_points": null,
+          "subject_key_id": "4505be2651fabccc240ff0fb31307759ef678853",
+          "certificate_policies": [
+            {
+              "id": "2.23.140.1.2.1"
+            }
+          ],
+          "key_usage": {
+            "digital_signature": true,
+            "certificate_sign": null,
+            "crl_sign": null,
+            "key_encipherment": true,
+            "value": 5
+          },
+          "authority_key_id": "bbbcc347a5e4bca9c6c3a4720c108da235e1c8e8",
+          "authority_info_access": {
+            "issuer_urls": [
+              "http://r10.i.lencr.org/"
+            ]
+          },
+          "basic_constraints": {
+            "is_ca": false,
+            "max_path_len": null
+          },
+          "extended_key_usage": {
+            "client_auth": true,
+            "server_auth": true
+          },
+          "subject_alt_name": {
+            "dns_names": [
+              "fhvejle.dk",
+              "www.fhvejle.dk"
+            ]
+          },
+          "signed_certificate_timestamps": [
+            {
+              "log_id": "fVkeEuF4KnscYWd8Xv340IdcFKBOlZ65Ay/ZDowuebg=",
+              "signature": "BAMASDBGAiEArkjdryerI4RcF67UqL+cOXk88FqDBGaSBqsS1Btdb14CIQDCg0qAvVQ0IhG8ic0SQ+KHshGA54uanjmouRSSn62Ybg==",
+              "version": 0,
+              "timestamp": 1737920440
+            },
+            {
+              "log_id": "ouMK5EXvva2bfjjtR2d3U9eCW4SU1yteGyzEuVCkR+c=",
+              "signature": "BAMARzBFAiA62pgoAluDZaJKTNu6YUGQxQLV/BuNJ5Njsl1ODzvmHgIhAI8WG8GW982he03vJfpfP5xTP8UB0dvS3c2LuKEqTJ6e",
+              "version": 0,
+              "timestamp": 1737920440
+            }
+          ],
+          "extra": null
+        },
+        "names": [
+          "fhvejle.dk",
+          "www.fhvejle.dk"
+        ],
+        "chain": [
+          {
+            "issuer_dn": "C=US, O=Internet Security Research Group, CN=ISRG Root X1",
+            "subject_dn": "C=US, O=Let's Encrypt, CN=R10",
+            "serial_number": "100566080436859127493189557861323994576",
+            "version": 3,
+            "validation_level": "DV",
+            "src": null,
+            "redacted": false,
+            "subject": {
+              "country": [
+                "US"
+              ],
+              "organization": [
+                "Let's Encrypt"
+              ],
+              "common_name": [
+                "R10"
+              ]
+            },
+            "issuer": {
+              "country": [
+                "US"
+              ],
+              "organization": [
+                "Internet Security Research Group"
+              ],
+              "common_name": [
+                "ISRG Root X1"
+              ]
+            },
+            "fingerprints": {
+              "md5": "af1c77aecc8d77e9aacb0c475840c392",
+              "sha1": "00abefd055f9a9c784ffdeabd1dcdd8fed741436",
+              "sha256": "9d7c3f1aa6ad2b2ec0d5cf1e246f8d9ae6cbc9fd0755ad37bb974b1f2fb603f3",
+              "tbs": "e644ba6963e335fe765cb9976b12b10eb54294b42477764ccb3a3acca3acb2fc",
+              "tbs_noct": "e644ba6963e335fe765cb9976b12b10eb54294b42477764ccb3a3acca3acb2fc",
+              "spki_subject": "4b110b884d924c9fd53991e330dde455e728f73c19b43197a712da0226188958"
+            },
+            "signature": {
+              "valid": false,
+              "signature_algorithm": {
+                "name": "SHA256-RSA",
+                "oid": "1.2.840.113549.1.1.11"
+              },
+              "value": "krHnQTfreZ2B5s3iJeE6IOmQRJWjgVzPw139vaBw1bGWKCIL0vIozwzn1OZDjCQiHcFCktEJr59L9MhwTyAWsVrdAfYf+B9haxQnsHKNY67u4s5Lzzfdu6PUzeetUK29v+PsPmI2cJkxp+iN3epi4hKu9ZzUPSwMqtCceb7qPVxEbpYxY1p91n5PJKBLBX9eb9LU6l8zSxPWV7bK3lG4XaMJgnT9x3ies7msFtpKK5bDtotij/l0GaKeA97pb5uwD9KgWvaFXMIEt8jVTjLEvwRdvCn294GPDF08U8lAkIv7tghluaQh1QnlE4SEN4LOECj8dsIGJXpGUk3aU3KkJz9icKy+aUgA+2cP21uh6NcDIS3XyfaZQjmDQ993ChII8SXWupQZVBiIpcWO4RqZk3lr7Bz5MUCwzDIA359e57SSq5CCkY0N4B6Vulk7LktfwrdGNVI5BsC9qqxSwSKgRJeZ9wygIaehbHFHFhcBaMDKpiZlBHyzrsnnlFXCb5s8HKn5LsUgGvB24L7sGNZP2CX7dhHov+YhD+jozLW2p9W4959Bz2EiRmqDtmiXLnzqTpXbI+suyCsohKRg6Un0RC47+cpiVwHiXZAW+cn8eiNIjqbVgXLxKPpdzvvtTnOPlC7SQZSYmdunr3Bf9b77AiC/ZidstK36dRILKz7OA54=",
+              "self_signed": false
+            },
+            "signature_algorithm": {
+              "name": "SHA256-RSA",
+              "oid": "1.2.840.113549.1.1.11"
+            },
+            "validity": {
+              "length": 94607999,
+              "start": "2024-03-13T00:00:00Z",
+              "end": "2027-03-12T23:59:59Z"
+            },
+            "extensions": {
+              "crl_distribution_points": [
+                "http://x1.c.lencr.org/"
+              ],
+              "subject_key_id": "bbbcc347a5e4bca9c6c3a4720c108da235e1c8e8",
+              "certificate_policies": [
+                {
+                  "id": "2.23.140.1.2.1"
+                }
+              ],
+              "key_usage": {
+                "digital_signature": true,
+                "certificate_sign": true,
+                "crl_sign": true,
+                "key_encipherment": null,
+                "value": 97
+              },
+              "authority_key_id": "79b459e67bb6e5e40173800888c81a58f6e99b6e",
+              "authority_info_access": {
+                "issuer_urls": [
+                  "http://x1.i.lencr.org/"
+                ]
+              },
+              "basic_constraints": {
+                "is_ca": true,
+                "max_path_len": 0
+              },
+              "extended_key_usage": {
+                "client_auth": true,
+                "server_auth": true
+              },
+              "subject_alt_name": null,
+              "signed_certificate_timestamps": null,
+              "extra": null
+            },
+            "names": null,
+            "chain": null,
+            "features": {
+              "days_until_expiry": 470,
+              "valid_time_so_far_days": 624,
+              "has_expired": false,
+              "serial_number_length": 39,
+              "num_san_dns_names": 0,
+              "san_has_wildcard_dns": false,
+              "san_has_exact_subdomain_dns": false,
+              "is_trusted_certificate": true,
+              "key_cert_sign": true
+            }
+          }
+        ],
+        "features": {
+          "days_until_expiry": -216,
+          "valid_time_so_far_days": 305,
+          "has_expired": true,
+          "serial_number_length": 42,
+          "num_san_dns_names": 2,
+          "san_has_wildcard_dns": false,
+          "san_has_exact_subdomain_dns": true,
+          "is_trusted_certificate": false,
+          "key_cert_sign": null
+        }
+      }
+    },
+    "index_id": 4547,
+    "domain": "fhvejle.dk"
+  }
+]

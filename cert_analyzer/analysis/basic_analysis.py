@@ -16,15 +16,46 @@ def _parse_iso_z(dt_str: str) -> datetime:
 
 def is_expired(cert: Certificate) -> bool:
     """Return True if certificate is already expired."""
-    end = _parse_iso_z(cert.validity.end)
-    return datetime.now(timezone.utc) > end
+    v = cert.validity
+
+    # Support both: object with .end and dict with ["end"]
+    if isinstance(v, dict):
+        end_value = v.get("end")
+    else:
+        end_value = getattr(v, "end", None)
+
+    if not end_value:
+        # Decide policy: treat as expired or raise
+        raise ValueError("validity.end is missing")
+
+    end = _parse_iso_z(end_value)
+    return datetime.now(timezone.utc) > end 
+
 
 
 def days_until_expiry(cert: Certificate) -> int:
     """Return number of days until expiry (negative if already expired)."""
-    end = _parse_iso_z(cert.validity.end)
+    v = cert.validity
+
+    # Support both: object with .end and dict with ["end"]
+    if isinstance(v, dict):
+        end_value = v.get("end")
+    else:
+        end_value = getattr(v, "end", None)
+
+    if not end_value:
+        # Decide what you want here: raise or use a default
+        raise ValueError("validity.end is missing")
+
+    end = _parse_iso_z(end_value)
     delta = end - datetime.now(timezone.utc)
     return delta.days
+
+# def days_until_expiry(cert: Certificate) -> int:
+#     """Return number of days until expiry (negative if already expired)."""
+#     end = _parse_iso_z(cert.validity.end)
+#     delta = end - datetime.now(timezone.utc)
+#     return delta.days
 
 def compute_certificate_features(cert: Certificate) -> CertificateFeatures:
     """Compute and return features for a given certificate."""

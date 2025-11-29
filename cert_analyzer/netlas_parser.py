@@ -1,6 +1,5 @@
 # cert_analyzer/parser_netlas.py
-from typing import Any, Dict, List
-
+from typing import Any, Dict, List, Optional
 from .models.common import (
     Signature,
     SignatureAlgorithm,
@@ -184,26 +183,32 @@ def _parse_certificate(cert: Dict[str, Any]) -> Certificate:
     return certificate
 
 
-
-
-
-def parse_netlas_result(raw: Dict[str, Any],searching_domain) -> NetlasResult:
+def parse_netlas_result(
+    raw: Dict[str, Any],
+    searching_domain: Optional[str] = None,
+) -> NetlasResult:
     items: List[CertificateItem] = []
 
-    for item in raw["items"]:
+    # If "items" exists, use it; otherwise treat raw itself as a single item
+    raw_items = raw.get("items")
+    if raw_items is None:
+        raw_items = [raw]
+
+    for item in raw_items:
         h = item.get("highlight", {})
 
-        certificate_subject_dn = h.get("certificate.subject_dn", None)
+        certificate_subject_dn = h.get("certificate_subject_dn")
 
-        #Extracting only the CN matching the searching domain
-        if certificate_subject_dn:
+        # Optional: filter only certificates whose CN matches searching_domain
+        if searching_domain and certificate_subject_dn:
             cn = certificate_subject_dn.split(",")[0].strip()
             if cn != f"CN={searching_domain}":
                 continue
+
         print(f"Parsing certificate: {certificate_subject_dn}")
 
         highlight = Highlight(
-            certificate_subject_dn=h.get("certificate.subject_dn"),
+            certificate_subject_dn=h.get("certificate_subject_dn"),
         )
 
         cert_dict = item["data"]["certificate"]
@@ -224,3 +229,42 @@ def parse_netlas_result(raw: Dict[str, Any],searching_domain) -> NetlasResult:
         )
 
     return NetlasResult(items=items)
+
+
+# def parse_netlas_result(raw: Dict[str, Any],searching_domain) -> NetlasResult:
+#     items: List[CertificateItem] = []
+
+#     for item in raw["items"]:
+#         h = item.get("highlight", {})
+
+#         certificate_subject_dn = h.get("certificate.subject_dn", None)
+
+#         #Extracting only the CN matching the searching domain
+#         if certificate_subject_dn:
+#             cn = certificate_subject_dn.split(",")[0].strip()
+#             if cn != f"CN={searching_domain}":
+#                 continue
+#         print(f"Parsing certificate: {certificate_subject_dn}")
+
+#         highlight = Highlight(
+#             certificate_subject_dn=h.get("certificate.subject_dn"),
+#         )
+
+#         cert_dict = item["data"]["certificate"]
+#         cert = _parse_certificate(cert_dict)
+
+#         data = CertificateData(
+#             last_updated=item["data"]["last_updated"],
+#             timestamp=item["data"]["@timestamp"],
+#             certificate=cert,
+#         )
+
+#         items.append(
+#             CertificateItem(
+#                 highlight=highlight,
+#                 data=data,
+#                 index_id=item["index_id"],
+#             )
+#         )
+
+#     return NetlasResult(items=items)
