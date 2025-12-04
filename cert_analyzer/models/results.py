@@ -20,7 +20,7 @@ class CertificateData:
 class CertificateItem:
     highlight: Highlight
     data: CertificateData
-    index_id: int
+    #index_id: int
 
 
 

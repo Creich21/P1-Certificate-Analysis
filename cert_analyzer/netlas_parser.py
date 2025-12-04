@@ -224,7 +224,7 @@ def parse_netlas_result(
             CertificateItem(
                 highlight=highlight,
                 data=data,
-                index_id=item["index_id"],
+                #index_id=item["index_id"],
             )
         )
 

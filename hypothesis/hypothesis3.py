@@ -1,12 +1,15 @@
 #Hypothesis 3. It is expected to see a correlation between missing information fields and a high likelihood of phishing
 #Also checks if certificate is self-signed or not
 # in P1-Certificate-Analysis run python3 -m hypothesis.hypothesis3
+import csv
 import datetime
 import json
 from pathlib import Path
 import sys
 from colorama import Fore, Style
 from cert_analyzer.analysis.basic_analysis import _parse_iso_z, days_until_expiry, is_expired
+import logging
+
 
 
 project_root = Path(__file__).resolve().parent.parent
@@ -19,25 +22,75 @@ from cert_analyzer.models.features import CertificateFeatures
 from cert_analyzer.models.results import Highlight
 from cert_analyzer.models.certificates import Certificate
 
+from collections import Counter, defaultdict
+
+field_missing_count: Counter[str] = Counter()
+domain_missing_count: defaultdict[str, list[int]] = defaultdict(list)
+missing_count_dist: Counter[int] = Counter()
+validation_level_counts: Counter[str] = Counter()
+DomainMissingCount = defaultdict[str, list[int]]
+
+
 
 
 def get_filename_from_path(file_path: Path) -> str:
     """Extract just the filename from a full path"""
     return file_path.name
 
-def check_if_json_is_empty(f, json_data, message:str="") -> bool:
+def check_if_json_is_empty(f, json_data, logger, message:str="") -> bool:
     if json_data is None or json_data == []:
-        #set_alert(Fore.RED + f"Empty JSON data in file {get_filename_from_path(f)}. {message}" + Style.RESET_ALL)
+        logger.error(f"No certificate in {get_filename_from_path(f)}. {message}")
         return True
     return False
 
-def set_alert(message:str=""):
-    """This functions is enabled when a suspicious certificate is found.
-    It sets an alert when detects a certificate with missing fields"""
-    print(f"ALERT: {message}")
-    #open("alerts.log", "a").write(f"ALERT: {message}\n")
 
 
+
+def custom_logger() -> logging.Logger:
+    """Create a logger to log alerts to console and file."""
+    logger = logging.getLogger("certificate_alerts")
+
+
+    if logger.handlers:
+        return logger
+
+    logger.setLevel(logging.INFO)
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+
+
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.INFO)
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+
+
+    log_path = Path("popular_certificate_alerts.log")
+    fh = logging.FileHandler(log_path, encoding="utf-8")
+    fh.setLevel(logging.INFO)
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
+
+    return logger
+
+
+
+
+def calculate_certificate_lifespan_days(certificate: Certificate) -> int:
+    """Calculate the total lifespan of a certificate in days."""
+    start_str = certificate.validity.get("start")
+    end_str = certificate.validity.get("end")
+
+    if not start_str or not end_str:
+        return 0
+
+    start_date = _parse_iso_z(start_str)
+    end_date = _parse_iso_z(end_str)
+
+    if not start_date or not end_date:
+        return 0
+
+    lifespan = (end_date - start_date).days
+    return lifespan
 
 
 
@@ -45,7 +98,7 @@ def get_blocked_certs_dir() -> Path:
     base_dir = Path(__file__).resolve().parent
     project_root = base_dir.parent
     data_dir = project_root / "data"
-    blocked_dir = data_dir / "netlas_certs_blocked_no_duplicates"
+    blocked_dir = data_dir / "popular_domain_certs"
     return blocked_dir
 
 def validate_directory(directory: Path) -> bool:
@@ -132,7 +185,9 @@ def parse_certificates(json_data: List[Dict[str, Any]]) -> List[CertificateItem]
                 san_has_wildcard_dns = any(n.startswith("*.") for n in san)
                 san_has_exact_subdomain_dns = any("." in n and not n.startswith("*.") for n in san)
             else:
-                set_alert(Fore.RED + f"Certificate {certificate.subject_dn} is missing SAN information." + Style.RESET_ALL)
+                num_san_dns_names = 0
+                san_has_wildcard_dns = False
+                san_has_exact_subdomain_dns = False
 
 
             # Time-related features
@@ -169,7 +224,7 @@ def parse_certificates(json_data: List[Dict[str, Any]]) -> List[CertificateItem]
     print(f"Total certificates parsed: {len(certificates)}")
     return certificates
 
-def check_for_missing_fields(certificate: Certificate) -> None:
+def check_for_missing_fields(certificate: Certificate, logger) -> List[str]:
     """Check for missing fields in a certificate and set alerts accordingly."""
 
     missing_fields = []
@@ -332,30 +387,123 @@ def check_for_missing_fields(certificate: Certificate) -> None:
         prefix = f"Certificate {certificate.subject_dn} is missing fields: "
         fields_str = ", ".join(missing_fields)
 
-        set_alert(prefix + Fore.RED + fields_str + Style.RESET_ALL)
+        logger.warning(f"{prefix}{fields_str}")
 
-def check_if_certificate_is_self_signed(certificate: Certificate) -> None:
+
+    return missing_fields
+
+def check_if_certificate_is_self_signed(certificate: Certificate, logger) -> None:
     sig = certificate.signature or {}
     is_self_signed = sig.get("self_signed")
 
-    print(is_self_signed)
 
     if is_self_signed:
-        print(
-            Fore.YELLOW
-            + f"Certificate {certificate.subject_dn} is self-signed."
-            + Style.RESET_ALL
-        )
-
-    
+        logger.warning(f"Certificate {certificate.subject_dn} is self-signed.")
 
 
-def read_netlas_certs_blocked():
+
+def validation_level_counter(level: str) -> None:
+    """Count occurrences of different validation levels (DV, EV, OV)."""
+    level = level.lower() if level else "none"
+    validation_level_counts[level] += 1
+    return
+
+
+
+
+def write_field_stats_csv(field_missing_count: Counter, filename: str = "hypothesis/csv_plots/field_stats.csv") -> None:
+    with open(filename, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["field", "missing_count"])
+        for field, cnt in field_missing_count.items():
+            writer.writerow([field, cnt])
+
+def write_domain_stats_csv(domain_missing_count: defaultdict[str, list[int]], filename: str = "hypothesis/csv_plots/domain_stats.csv") -> None:
+    with open(filename, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["subject_dn", "avg_missing_fields"])
+        for domain, counts in domain_missing_count.items():
+            avg = sum(counts) / len(counts)
+            writer.writerow([domain, avg])
+
+def write_missing_count_dist_csv(missing_count_dist: Counter, filename="hypothesis/csv_plots/missing_count_dist.csv") -> None:
+    with open(filename, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["num_missing_fields", "num_certificates"])
+        for k, cnt in sorted(missing_count_dist.items()):
+            writer.writerow([k, cnt])
+
+
+def write_domain_detail_csv(domain_missing_count: DomainMissingCount,
+                            filename: str = "hypothesis/csv_plots/domain_detail.csv") -> None:
+    """
+    Write per-domain stats to CSV with columns:
+      subject_dn, avg_missing_fields, max_missing_fields, num_certs
+    """
+    stats = compute_domain_stats(domain_missing_count)
+
+    with open(filename, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["subject_dn", "avg_missing_fields", "max_missing_fields", "num_certs"])
+        for domain, vals in stats.items():
+            writer.writerow([domain, vals["avg"], vals["max"], vals["num_certs"]])
+
+def write_overview_csv(
+    non_certificate_domain_counter: int,
+    domains_with_certs: int,
+    total_certificates: int,
+    filename: str = "hypothesis/csv_plots/overview_stats.csv",
+) -> None:
+    with open(filename, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["metric", "value"])
+        writer.writerow(["Non Certificate Domains", non_certificate_domain_counter])
+        writer.writerow(["Domains With Certificates", domains_with_certs])
+
+def write_validation_level_csv(validation_level_counts: Counter, filename: str = "hypothesis/csv_plots/validation_level_stats.csv") -> None:
+    """Write validation level counts to CSV"""
+    with open(filename, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["validation_level", "count"])
+        for level, cnt in validation_level_counts.items():
+            writer.writerow([level, cnt])
+
+
+
+
+
+def compute_domain_stats(domain_missing_count: DomainMissingCount) -> Dict[str, Dict[str, float]]:
+    """
+    For each domain, compute:
+      - avg_missing_fields
+      - max_missing_fields
+      - num_certs
+    Returns a dict: {domain: {"avg": float, "max": int, "num_certs": int}}
+    """
+    stats: Dict[str, Dict[str, float]] = {}
+
+    for domain, counts in domain_missing_count.items():
+        if not counts:
+            continue
+        avg_val = sum(counts) / len(counts)
+        max_val = max(counts)
+        stats[domain] = {
+            "avg": avg_val,
+            "max": max_val,
+            "num_certs": len(counts),
+        }
+
+    return stats
+
+
+
+def read_netlas_certs_blocked(logger):
     blocked_dir = get_blocked_certs_dir()
     if not validate_directory(blocked_dir):
         return []
     
-
+    total_certificates = 0
+    domains_with_certs = 0
     json_data = []
     non_certificate_domain_counter = 0
 
@@ -364,17 +512,40 @@ def read_netlas_certs_blocked():
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 file_name = get_filename_from_path(file_path)
-                print(f"Processing file: {file_name}")
+                logger.info(f"Processing file: {file_name}")
 
                 # Check how many of domains have no certificates
-                if check_if_json_is_empty(file_path,data):
+                if check_if_json_is_empty(file_path,data,logger):
                     non_certificate_domain_counter += 1
                     continue
-
+                
+                domains_with_certs += 1
+                
+                #Parse certificates for each domain
                 certificates = parse_certificates(data)
+
                 for certificate in certificates:
-                    check_for_missing_fields(certificate)
-                    check_if_certificate_is_self_signed(certificate)
+                    total_certificates += 1
+                    missing_fields = check_for_missing_fields(certificate,logger)
+                    check_if_certificate_is_self_signed(certificate,logger)
+                    validation_level_counter(certificate.validation_level)
+
+
+
+                    # stats
+                    unique_missing = set(missing_fields)
+
+
+                    for field in unique_missing:
+
+                        len_unique_missing = len(unique_missing)
+                        missing_count_dist[len_unique_missing] += 1
+
+                        field_missing_count[field] += 1
+
+                    domain_missing_count[certificate.subject_dn].append(len(unique_missing))
+
+
 
                 json_data.append(data)
         except json.JSONDecodeError as e:
@@ -383,11 +554,31 @@ def read_netlas_certs_blocked():
             print(f"Error processing {file_path}: {e}")
     
     print(f"Number of non-certificate domains: {non_certificate_domain_counter}")
+    print(f"Total domains with certificates: {domains_with_certs}")
+    print(f"Total domains processed: {non_certificate_domain_counter + domains_with_certs}")
+
+    print(f"Total certificates processed: {total_certificates}")
+
+    # Write stats to CSV files
+    write_field_stats_csv(field_missing_count)
+    write_domain_stats_csv(domain_missing_count)
+    write_missing_count_dist_csv(missing_count_dist)
+    write_domain_detail_csv(domain_missing_count)
+    write_validation_level_csv(validation_level_counts)
+    write_overview_csv(
+        non_certificate_domain_counter,
+        domains_with_certs,
+        total_certificates,
+    )
+
     return json_data
 
 
 def main():
-    read_netlas_certs_blocked()
+    logger = custom_logger()
+    logger.info("Starting analysis of blocked Netlas certificates...")
+    read_netlas_certs_blocked(logger)
+    logger.info("Completed analysis of blocked Netlas certificates.")
 
 if __name__ == "__main__":
     main()

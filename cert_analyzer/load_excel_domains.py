@@ -12,7 +12,7 @@ def get_blocked_domains() -> list[str]:
     base_dir = Path(__file__).resolve().parent
     project_root = base_dir.parent
     data_dir = project_root / "data"
-    csv_path = data_dir / "blocked_no_duplicates.csv"
+    csv_path = data_dir / "popular_domain_features.csv"
     return load_domains_from_csv(csv_path)
 
 

@@ -1,5 +1,4 @@
-{
-    "items": [
+[
         {
             "highlight": {
                 "certificate.subject_dn": "CN=icde2018.aau.dk"
@@ -4012,5 +4011,4 @@
             },
             "index_id": 4547
         }
-    ]
-}
+]

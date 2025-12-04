@@ -88,7 +88,7 @@ def fetch_all_certificate_results(domain: str, results_per_page: int = 20):
 
 
 
-def save_certificates_of_a_domain_in_json(domain: str, certificates: list, output_folder: str = "certs"):
+def save_certificates_of_a_domain_in_json(domain: str, certificates: list, output_folder: str = "popular_domain_certs"):
     os.makedirs(output_folder, exist_ok=True)
 
     # Flatten certs and insert domain field
@@ -152,7 +152,7 @@ def keep_the_latest_certificate(certificates: list):
 
 def main():
     blocked_domains = get_blocked_domains()
-    for domain in blocked_domains[69:]:
+    for domain in blocked_domains:
         print(f"\nProcessing domain: {domain}")
         certificates = extract_and_analyze_certificates(domain)
         save_certificates_of_a_domain_in_json(domain, certificates)
@@ -172,3 +172,4 @@ if __name__ == "__main__":
 
 
 
+#watoo
