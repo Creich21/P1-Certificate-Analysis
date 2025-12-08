@@ -152,7 +152,7 @@ def keep_the_latest_certificate(certificates: list):
 
 def main():
     blocked_domains = get_blocked_domains()
-    for domain in blocked_domains:
+    for domain in blocked_domains[558:]:
         print(f"\nProcessing domain: {domain}")
         certificates = extract_and_analyze_certificates(domain)
         save_certificates_of_a_domain_in_json(domain, certificates)

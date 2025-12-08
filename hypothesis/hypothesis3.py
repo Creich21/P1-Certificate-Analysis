@@ -1,28 +1,39 @@
 #Hypothesis 3. It is expected to see a correlation between missing information fields and a high likelihood of phishing
 #Also checks if certificate is self-signed or not
 # in P1-Certificate-Analysis run python3 -m hypothesis.hypothesis3
+
 import csv
 import datetime
 import json
-from pathlib import Path
-import sys
-from colorama import Fore, Style
-from cert_analyzer.analysis.basic_analysis import _parse_iso_z, days_until_expiry, is_expired
 import logging
+import sys
+from collections import Counter, defaultdict
+from pathlib import Path
+from typing import Any, Dict, List, Literal
 
 
+import pandas as pd
+from colorama import Fore, Style
+
+
+from cert_analyzer.analysis.basic_analysis import (
+    _parse_iso_z,
+    days_until_expiry,
+    is_expired,
+)
+from cert_analyzer.models.certificates import Certificate
+from cert_analyzer.models.features import CertificateFeatures
+from cert_analyzer.models.results import CertificateItem, Highlight
+
+from hypothesis.csv_plots.csv_plots import (
+    plot_empty_certificates,
+    plot_missing_rate_per_field,
+    plot_most_common_missing_fields,
+    plot_summary_statistics,
+)
 
 project_root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(project_root))
-
-from typing import Any, Dict, List
-from cert_analyzer.models.results import CertificateItem
-from cert_analyzer.models.features import CertificateFeatures
-
-from cert_analyzer.models.results import Highlight
-from cert_analyzer.models.certificates import Certificate
-
-from collections import Counter, defaultdict
 
 field_missing_count: Counter[str] = Counter()
 domain_missing_count: defaultdict[str, list[int]] = defaultdict(list)
@@ -92,13 +103,42 @@ def calculate_certificate_lifespan_days(certificate: Certificate) -> int:
     lifespan = (end_date - start_date).days
     return lifespan
 
+def get_certs_dir(category: Literal["blocked", "popular", "unpopular"]) -> Path:
+    """
+    Returns the file path to the directory containing certificates for a 
+    specified category (blocked, popular, or unpopular).
+
+    """
+    
+    base_dir = Path(__file__).resolve().parent
+    project_root = base_dir.parent
+    data_dir = project_root / "data"
+    
+    # Determine the specific path based on the category
+    if category == "blocked":
+        certs_dir = data_dir / "blocked_certs" / "most_recents"
+    elif category == "popular":
+        certs_dir = data_dir / "popular_certs" / "most_recents"
+    elif category == "unpopular":
+        certs_dir = data_dir / "unpopular_certs"
+    else:
+        raise ValueError(
+            f"Invalid category: '{category}'. Must be 'blocked', 'popular', or 'unpopular'."
+        )
+
+    if not certs_dir.exists():
+         print(f"Warning: Certificate directory not found at {certs_dir}")
+
+    return certs_dir
+
+
 
 
 def get_blocked_certs_dir() -> Path:
     base_dir = Path(__file__).resolve().parent
     project_root = base_dir.parent
     data_dir = project_root / "data"
-    blocked_dir = data_dir / "popular_domain_certs"
+    blocked_dir = data_dir / "blocked_certs/most_recents"
     return blocked_dir
 
 def validate_directory(directory: Path) -> bool:
@@ -387,10 +427,15 @@ def check_for_missing_fields(certificate: Certificate, logger) -> List[str]:
         prefix = f"Certificate {certificate.subject_dn} is missing fields: "
         fields_str = ", ".join(missing_fields)
 
-        logger.warning(f"{prefix}{fields_str}")
+        logger.warning(Fore.RED + f"{prefix}{fields_str}" + Style.RESET_ALL)
 
 
     return missing_fields
+
+
+
+
+
 
 def check_if_certificate_is_self_signed(certificate: Certificate, logger) -> None:
     sig = certificate.signature or {}
@@ -411,174 +456,197 @@ def validation_level_counter(level: str) -> None:
 
 
 
-def write_field_stats_csv(field_missing_count: Counter, filename: str = "hypothesis/csv_plots/field_stats.csv") -> None:
-    with open(filename, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["field", "missing_count"])
-        for field, cnt in field_missing_count.items():
-            writer.writerow([field, cnt])
-
-def write_domain_stats_csv(domain_missing_count: defaultdict[str, list[int]], filename: str = "hypothesis/csv_plots/domain_stats.csv") -> None:
-    with open(filename, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["subject_dn", "avg_missing_fields"])
-        for domain, counts in domain_missing_count.items():
-            avg = sum(counts) / len(counts)
-            writer.writerow([domain, avg])
-
-def write_missing_count_dist_csv(missing_count_dist: Counter, filename="hypothesis/csv_plots/missing_count_dist.csv") -> None:
-    with open(filename, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["num_missing_fields", "num_certificates"])
-        for k, cnt in sorted(missing_count_dist.items()):
-            writer.writerow([k, cnt])
+# Statistical Analysis Functions
 
 
-def write_domain_detail_csv(domain_missing_count: DomainMissingCount,
-                            filename: str = "hypothesis/csv_plots/domain_detail.csv") -> None:
+
+def compute_summary_stats(df: pd.DataFrame, logger) -> pd.DataFrame:
     """
-    Write per-domain stats to CSV with columns:
-      subject_dn, avg_missing_fields, max_missing_fields, num_certs
+    Compute summary statistics (mean, median, std, min, max) per category.
     """
-    stats = compute_domain_stats(domain_missing_count)
+    stats_missing = df.groupby("label")["missing_count"].agg(["mean", "median", "std", "min", "max"])
+    logger.info(Fore.GREEN + "Summary statistics per category:" + Style.RESET_ALL)
+    logger.info(f"\n{stats_missing}")
 
-    with open(filename, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["subject_dn", "avg_missing_fields", "max_missing_fields", "num_certs"])
-        for domain, vals in stats.items():
-            writer.writerow([domain, vals["avg"], vals["max"], vals["num_certs"]])
-
-def write_overview_csv(
-    non_certificate_domain_counter: int,
-    domains_with_certs: int,
-    total_certificates: int,
-    filename: str = "hypothesis/csv_plots/overview_stats.csv",
-) -> None:
-    with open(filename, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["metric", "value"])
-        writer.writerow(["Non Certificate Domains", non_certificate_domain_counter])
-        writer.writerow(["Domains With Certificates", domains_with_certs])
-
-def write_validation_level_csv(validation_level_counts: Counter, filename: str = "hypothesis/csv_plots/validation_level_stats.csv") -> None:
-    """Write validation level counts to CSV"""
-    with open(filename, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["validation_level", "count"])
-        for level, cnt in validation_level_counts.items():
-            writer.writerow([level, cnt])
+    plot_summary_statistics(stats_missing, output_folder="hypothesis/csv_plots")
+    return stats_missing
 
 
-
-
-
-def compute_domain_stats(domain_missing_count: DomainMissingCount) -> Dict[str, Dict[str, float]]:
+def most_common_missing_fields_overall(df: pd.DataFrame, top_n: int = 20) -> Counter:
     """
-    For each domain, compute:
-      - avg_missing_fields
-      - max_missing_fields
-      - num_certs
-    Returns a dict: {domain: {"avg": float, "max": int, "num_certs": int}}
+    Count most commonly missing fields across all categories.
     """
-    stats: Dict[str, Dict[str, float]] = {}
+    all_fields = Counter()
+    for row in df["missing_fields"]:
+        all_fields.update(row)
 
-    for domain, counts in domain_missing_count.items():
-        if not counts:
-            continue
-        avg_val = sum(counts) / len(counts)
-        max_val = max(counts)
-        stats[domain] = {
-            "avg": avg_val,
-            "max": max_val,
-            "num_certs": len(counts),
-        }
+    print("Most commonly missing fields (overall):")
+    for field, count in all_fields.most_common(top_n):
+        print(f"{field}: {count}")
 
-    return stats
+    plot_most_common_missing_fields(all_fields, output_folder="hypothesis/csv_plots", filename="most_common_missing_fields.png")
+    return all_fields
 
 
+def most_missing_fields_per_category(df: pd.DataFrame, top_n: int = 10) -> Dict[str, Counter]:
+    """
+    Count most missing fields per category.
+    """
+    missing_by_cat = defaultdict(Counter)
+    for _, row in df.iterrows():
+        missing_by_cat[row["label"]].update(row["missing_fields"])
 
-def read_netlas_certs_blocked(logger):
-    blocked_dir = get_blocked_certs_dir()
-    if not validate_directory(blocked_dir):
-        return []
+    print("\nMost missing fields per category:\n")
+    for cat, counter in missing_by_cat.items():
+        print(f"\nCategory: {cat}")
+        for field, count in counter.most_common(top_n):
+            print(f"{field}: {count}")
+    return missing_by_cat
+
+
+def missing_rate_per_field(df: pd.DataFrame, missing_by_cat: Dict[str, Counter], top_n: int = 10) -> Dict[str, Dict[str, float]]:
+    """
+    Compute missing rate (percentage) per field for each category.
+    """
+    missing_rate = {}
+    for cat, counter in missing_by_cat.items():
+        total = len(df[df["label"] == cat])
+        missing_rate[cat] = {field: (count / total) * 100 for field, count in counter.items()}
+
+    print("\nMissing rate (%) per field per category:\n")
+    for cat in missing_rate:
+        print(f"\nCategory: {cat}")
+        for field, pct in sorted(missing_rate[cat].items(), key=lambda x: -x[1])[:top_n]:
+            print(f"{field}: {pct:.2f}%")
+
+    plot_missing_rate_per_field(missing_rate, output_folder="hypothesis/csv_plots", filename="missing_rate_per_field.png")
+    return missing_rate
+
+def empty_certificate_analysis(df: pd.DataFrame, logger) -> None:
+    # Count of empty certificates per category
+    empty_counts = df.groupby("label")["no_certificate"].sum()
+    
+    # Total certificates per category
+    total_counts = df.groupby("label").size()
+    
+    # Percentage of empty certificates per category
+    empty_percentage = (empty_counts / total_counts) * 100
+
+    # Combine results into a single DataFrame for nicer logging
+    summary_df = pd.DataFrame({
+        "total_certificates": total_counts,
+        "empty_certificates": empty_counts,
+        "empty_percentage": empty_percentage
+    })
+
+    logger.info(Fore.GREEN + "Empty certificate analysis per category:" + Style.RESET_ALL)
+    logger.info(Fore.GREEN + f"\n{summary_df}" + Style.RESET_ALL)
+
+
+    plot_empty_certificates(summary_df, output_folder="hypothesis/csv_plots", filename="empty_certificates.png")
+
+def statistical_analysis(df: pd.DataFrame, logger) -> None:
+
+    
+    empty_certificate_analysis(df, logger)
+    compute_summary_stats(df, logger)
+    all_fields = most_common_missing_fields_overall(df)
+    missing_by_cat = most_missing_fields_per_category(df)
+    missing_rate = missing_rate_per_field(df, missing_by_cat)
+
+
+
+def read_netlas_certs(logger):
+
+    categories = {
+        "Blocked": get_certs_dir("blocked"),
+        "Popular": get_certs_dir("popular"),
+        "Unpopular": get_certs_dir("unpopular"),
+    }
+
+    
+    results = []
     
     total_certificates = 0
     domains_with_certs = 0
     json_data = []
     non_certificate_domain_counter = 0
 
-    for file_path in blocked_dir.glob("*.json"):
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                file_name = get_filename_from_path(file_path)
-                logger.info(f"Processing file: {file_name}")
 
-                # Check how many of domains have no certificates
-                if check_if_json_is_empty(file_path,data,logger):
-                    non_certificate_domain_counter += 1
-                    continue
+    for label, directory in categories.items():
+        if not validate_directory(directory):
+            logger.error(f"Invalid directory for category '{label}': {directory}")
+            continue
+
+
+        json_files = list(directory.glob("*.json"))
+        logger.info(f"{label}: Found {len(json_files)} JSON files in {directory}")
+
+        for file_path in json_files:
+            file_name = get_filename_from_path(file_path)
+            logger.info(f"Processing file: {file_name} in category: {label}")
+
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+
+            except json.JSONDecodeError as e:
+                logger.error(f"Error reading {file_path}: {e}")
+                continue
+            except Exception as e:
+                logger.error(f"Error processing {file_path}: {e}")
+                continue
+
+            # Check how many of domains have no certificates
+            if check_if_json_is_empty(file_path, data, logger):
+                non_certificate_domain_counter += 1
                 
-                domains_with_certs += 1
+                results.append({
+                    "label": label,
+                    "missing_count": None,              
+                    "missing_fields": [],               
+                    "domain": file_path.stem,
+                    "no_certificate": True
+                })
                 
-                #Parse certificates for each domain
-                certificates = parse_certificates(data)
+                continue
+            domains_with_certs += 1
 
-                for certificate in certificates:
-                    total_certificates += 1
-                    missing_fields = check_for_missing_fields(certificate,logger)
-                    check_if_certificate_is_self_signed(certificate,logger)
-                    validation_level_counter(certificate.validation_level)
-
-
-
-                    # stats
-                    unique_missing = set(missing_fields)
-
-
-                    for field in unique_missing:
-
-                        len_unique_missing = len(unique_missing)
-                        missing_count_dist[len_unique_missing] += 1
-
-                        field_missing_count[field] += 1
-
-                    domain_missing_count[certificate.subject_dn].append(len(unique_missing))
+            #Parse certificates for each domain
+            certificates = parse_certificates(data)
+            for certificate in certificates:
+                total_certificates += 1
+                missing_fields = check_for_missing_fields(certificate, logger)
+                
+                results.append({
+                    "label": label,
+                    "missing_count": len(missing_fields),
+                    "missing_fields": missing_fields,
+                    "domain": certificate.subject_dn,
+                    "no_certificate": False
+                })
 
 
+    logger.info(Fore.BLUE + f"Number of non-certificate domains: {non_certificate_domain_counter}" + Style.RESET_ALL)
+    logger.info(Fore.BLUE + f"Total domains with certificates: {domains_with_certs}" + Style.RESET_ALL)
+    logger.info(Fore.BLUE + f"Total domains processed: {non_certificate_domain_counter + domains_with_certs}" + Style.RESET_ALL)
+    logger.info(Fore.BLUE + f"Total certificates processed: {total_certificates}" + Style.RESET_ALL)
 
-                json_data.append(data)
-        except json.JSONDecodeError as e:
-            print(f"Error reading {file_path}: {e}")
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
-    
-    print(f"Number of non-certificate domains: {non_certificate_domain_counter}")
-    print(f"Total domains with certificates: {domains_with_certs}")
-    print(f"Total domains processed: {non_certificate_domain_counter + domains_with_certs}")
+    df = pd.DataFrame(results)
 
-    print(f"Total certificates processed: {total_certificates}")
+    statistical_analysis(df,logger)
 
-    # Write stats to CSV files
-    write_field_stats_csv(field_missing_count)
-    write_domain_stats_csv(domain_missing_count)
-    write_missing_count_dist_csv(missing_count_dist)
-    write_domain_detail_csv(domain_missing_count)
-    write_validation_level_csv(validation_level_counts)
-    write_overview_csv(
-        non_certificate_domain_counter,
-        domains_with_certs,
-        total_certificates,
-    )
-
-    return json_data
+    return results
 
 
 def main():
     logger = custom_logger()
     logger.info("Starting analysis of blocked Netlas certificates...")
-    read_netlas_certs_blocked(logger)
+    read_netlas_certs(logger)
     logger.info("Completed analysis of blocked Netlas certificates.")
 
 if __name__ == "__main__":
     main()
+
+
+

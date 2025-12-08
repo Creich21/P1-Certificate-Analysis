@@ -159,6 +159,7 @@ venv.bak/
 
 cert_analyzer/venv/
 data/
+data/blocklist.json
 csv_plots/
 hypothesis/images/
 popular_domain_certs/

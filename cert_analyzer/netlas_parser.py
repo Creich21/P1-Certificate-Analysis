@@ -116,14 +116,14 @@ def _parse_extensions(obj: Dict[str, Any]) -> Extensions:
         )
 
     san = None
-    if "subject_alt_name" in obj:
+    if "subject_alt_name" in obj and obj["subject_alt_name"] is not None:
         s = obj["subject_alt_name"]
         san = SubjectAltName(
             dns_names=s.get("dns_names"),
         )
 
     scts = None
-    if "signed_certificate_timestamps" in obj:
+    if "signed_certificate_timestamps" in obj and obj["signed_certificate_timestamps"] is not None:
         scts = [
             SignedCertificateTimestamp(
                 log_id=s["log_id"],
@@ -152,7 +152,7 @@ def _parse_extensions(obj: Dict[str, Any]) -> Extensions:
 def _parse_certificate(cert: Dict[str, Any]) -> Certificate:
     # chain first (recursive)
     chain = None
-    if "chain" in cert:
+    if "chain" in cert and cert["chain"] is not None:
         chain = [_parse_certificate(c) for c in cert["chain"]]
 
     subject = _parse_name_entity(cert["subject"]) if "subject" in cert else None
@@ -216,7 +216,8 @@ def parse_netlas_result(
 
         data = CertificateData(
             last_updated=item["data"]["last_updated"],
-            timestamp=item["data"]["@timestamp"],
+            #timestamp=item["data"]["@timestamp"],
+            timestamp=item["data"].get("@timestamp") or item["data"].get("timestamp"),
             certificate=cert,
         )
 
