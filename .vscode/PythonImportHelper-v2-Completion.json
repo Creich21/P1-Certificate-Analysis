@@ -1,0 +1,1967 @@
+[
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "DictReader",
+        "importPath": "csv",
+        "description": "csv",
+        "isExtraImport": true,
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "DictWriter",
+        "importPath": "csv",
+        "description": "csv",
+        "isExtraImport": true,
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "glob",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "glob",
+        "description": "glob",
+        "detail": "glob",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "merge_bibtex_files",
+        "importPath": "remove_duplicates_from_doi",
+        "description": "remove_duplicates_from_doi",
+        "isExtraImport": true,
+        "detail": "remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "save_unique_entries",
+        "importPath": "remove_duplicates_from_doi",
+        "description": "remove_duplicates_from_doi",
+        "isExtraImport": true,
+        "detail": "remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "remove_duplicate_titles",
+        "importPath": "remove_duplicate_titles",
+        "description": "remove_duplicate_titles",
+        "isExtraImport": true,
+        "detail": "remove_duplicate_titles",
+        "documentation": {}
+    },
+    {
+        "label": "remove_duplicate_titles",
+        "importPath": "remove_duplicate_titles",
+        "description": "remove_duplicate_titles",
+        "isExtraImport": true,
+        "detail": "remove_duplicate_titles",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "netlas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "netlas",
+        "description": "netlas",
+        "detail": "netlas",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "time,csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time.csv",
+        "description": "time.csv",
+        "detail": "time.csv",
+        "documentation": {}
+    },
+    {
+        "label": "parse_netlas_result",
+        "importPath": "cert_analyzer.netlas_parser",
+        "description": "cert_analyzer.netlas_parser",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.netlas_parser",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_netlas_result",
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "_parse_iso_z",
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "days_until_expiry",
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "is_expired",
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "get_blocked_domains",
+        "importPath": "cert_analyzer.load_excel_domains",
+        "description": "cert_analyzer.load_excel_domains",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.load_excel_domains",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "parser",
+        "importPath": "dateutil",
+        "description": "dateutil",
+        "isExtraImport": true,
+        "detail": "dateutil",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pointbiserialr",
+        "importPath": "scipy.stats",
+        "description": "scipy.stats",
+        "isExtraImport": true,
+        "detail": "scipy.stats",
+        "documentation": {}
+    },
+    {
+        "label": "ast",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ast",
+        "description": "ast",
+        "detail": "ast",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.express",
+        "description": "plotly.express",
+        "detail": "plotly.express",
+        "documentation": {}
+    },
+    {
+        "label": "tldextract",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tldextract",
+        "description": "tldextract",
+        "detail": "tldextract",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "dns",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dns",
+        "description": "dns",
+        "detail": "dns",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "dns.resolver",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dns.resolver",
+        "description": "dns.resolver",
+        "detail": "dns.resolver",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Fore",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Style",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Certificate",
+        "importPath": "cert_analyzer.models.certificates",
+        "description": "cert_analyzer.models.certificates",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.models.certificates",
+        "documentation": {}
+    },
+    {
+        "label": "CertificateFeatures",
+        "importPath": "cert_analyzer.models.features",
+        "description": "cert_analyzer.models.features",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.models.features",
+        "documentation": {}
+    },
+    {
+        "label": "CertificateItem",
+        "importPath": "cert_analyzer.models.results",
+        "description": "cert_analyzer.models.results",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.models.results",
+        "documentation": {}
+    },
+    {
+        "label": "Highlight",
+        "importPath": "cert_analyzer.models.results",
+        "description": "cert_analyzer.models.results",
+        "isExtraImport": true,
+        "detail": "cert_analyzer.models.results",
+        "documentation": {}
+    },
+    {
+        "label": "plot_empty_certificates",
+        "importPath": "hypothesis.csv_plots.csv_plots",
+        "description": "hypothesis.csv_plots.csv_plots",
+        "isExtraImport": true,
+        "detail": "hypothesis.csv_plots.csv_plots",
+        "documentation": {}
+    },
+    {
+        "label": "plot_missing_rate_per_field",
+        "importPath": "hypothesis.csv_plots.csv_plots",
+        "description": "hypothesis.csv_plots.csv_plots",
+        "isExtraImport": true,
+        "detail": "hypothesis.csv_plots.csv_plots",
+        "documentation": {}
+    },
+    {
+        "label": "plot_most_common_missing_fields",
+        "importPath": "hypothesis.csv_plots.csv_plots",
+        "description": "hypothesis.csv_plots.csv_plots",
+        "isExtraImport": true,
+        "detail": "hypothesis.csv_plots.csv_plots",
+        "documentation": {}
+    },
+    {
+        "label": "plot_summary_statistics",
+        "importPath": "hypothesis.csv_plots.csv_plots",
+        "description": "hypothesis.csv_plots.csv_plots",
+        "isExtraImport": true,
+        "detail": "hypothesis.csv_plots.csv_plots",
+        "documentation": {}
+    },
+    {
+        "label": "Scraper",
+        "importPath": "scraper",
+        "description": "scraper",
+        "isExtraImport": true,
+        "detail": "scraper",
+        "documentation": {}
+    },
+    {
+        "label": "crtshAPI",
+        "importPath": "crtsh",
+        "description": "crtsh",
+        "isExtraImport": true,
+        "detail": "crtsh",
+        "documentation": {}
+    },
+    {
+        "label": "Headers",
+        "importPath": "fake_headers",
+        "description": "fake_headers",
+        "isExtraImport": true,
+        "detail": "fake_headers",
+        "documentation": {}
+    },
+    {
+        "label": "parse_bib_file",
+        "kind": 2,
+        "importPath": "bibtex stuff.bib_to_csv",
+        "description": "bibtex stuff.bib_to_csv",
+        "peekOfCode": "def parse_bib_file(bib_path):\n    \"\"\"Parse a .bib file into a list of dictionaries.\"\"\"\n    with open(bib_path, 'r', encoding='utf-8') as f:\n        content = f.read()\n    # Split individual entries\n    entries = re.split(r'@', content)\n    parsed_entries = []\n    for entry in entries:\n        if not entry.strip():\n            continue",
+        "detail": "bibtex stuff.bib_to_csv",
+        "documentation": {}
+    },
+    {
+        "label": "write_csv",
+        "kind": 2,
+        "importPath": "bibtex stuff.bib_to_csv",
+        "description": "bibtex stuff.bib_to_csv",
+        "peekOfCode": "def write_csv(entries, csv_path):\n    \"\"\"Write parsed BibTeX entries to a CSV file.\"\"\"\n    # Collect all unique field names (case-insensitive)\n    all_fields = set()\n    for e in entries:\n        all_fields.update(e.keys())\n    all_fields = sorted(all_fields)\n    with open(csv_path, 'w', newline='', encoding='utf-8') as csvfile:\n        writer = csv.DictWriter(csvfile, fieldnames=all_fields)\n        writer.writeheader()",
+        "detail": "bibtex stuff.bib_to_csv",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "bibtex stuff.bib_to_csv",
+        "description": "bibtex stuff.bib_to_csv",
+        "peekOfCode": "def main():\n    print(f\"Parsing {BIB_PATH} ...\")\n    entries = parse_bib_file(BIB_PATH)\n    print(f\"Found {len(entries)} entries.\")\n    print(f\"Writing {CSV_PATH} ...\")\n    write_csv(entries, CSV_PATH)\n    print(\"✅ Done! CSV created successfully.\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "bibtex stuff.bib_to_csv",
+        "documentation": {}
+    },
+    {
+        "label": "BIB_PATH",
+        "kind": 5,
+        "importPath": "bibtex stuff.bib_to_csv",
+        "description": "bibtex stuff.bib_to_csv",
+        "peekOfCode": "BIB_PATH = r\"final.bib\"       # Path to your .bib file\nCSV_PATH = r\"final.csv\"      # Where to save the .csv file\n# ==========================\ndef parse_bib_file(bib_path):\n    \"\"\"Parse a .bib file into a list of dictionaries.\"\"\"\n    with open(bib_path, 'r', encoding='utf-8') as f:\n        content = f.read()\n    # Split individual entries\n    entries = re.split(r'@', content)\n    parsed_entries = []",
+        "detail": "bibtex stuff.bib_to_csv",
+        "documentation": {}
+    },
+    {
+        "label": "CSV_PATH",
+        "kind": 5,
+        "importPath": "bibtex stuff.bib_to_csv",
+        "description": "bibtex stuff.bib_to_csv",
+        "peekOfCode": "CSV_PATH = r\"final.csv\"      # Where to save the .csv file\n# ==========================\ndef parse_bib_file(bib_path):\n    \"\"\"Parse a .bib file into a list of dictionaries.\"\"\"\n    with open(bib_path, 'r', encoding='utf-8') as f:\n        content = f.read()\n    # Split individual entries\n    entries = re.split(r'@', content)\n    parsed_entries = []\n    for entry in entries:",
+        "detail": "bibtex stuff.bib_to_csv",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_dupes",
+        "description": "bibtex stuff.remove_dupes",
+        "peekOfCode": "def main():\n    # --- Step 1: Define your BibTeX input files ---\n# --- Automatically get all .bib files in a folder ---\n    bib_folder = \"bibtex_files\"  # folder containing your .bib files\n    bib_files = [f for f in glob.glob(os.path.join(bib_folder, \"*.bib\")) if os.path.isfile(f)]\n    if not bib_files:\n        print(f\"⚠️ No .bib files found in folder '{bib_folder}'\")\n    else:\n        print(f\"📚 Found {len(bib_files)} .bib files in '{bib_folder}':\")\n        for f in bib_files:",
+        "detail": "bibtex stuff.remove_dupes",
+        "documentation": {}
+    },
+    {
+        "label": "extract_title",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicate_titles",
+        "description": "bibtex stuff.remove_duplicate_titles",
+        "peekOfCode": "def extract_title(entry_text):\n    match = re.search(\n        r'title\\s*=\\s*[{\"]\\s*(.*?)\\s*[\"}]',\n        entry_text,\n        re.IGNORECASE | re.DOTALL\n    )\n    if match:\n        title = match.group(1).strip()\n        title = re.sub(r'\\s+', ' ', title.replace('\\n', ' '))  # clean whitespace\n        return title",
+        "detail": "bibtex stuff.remove_duplicate_titles",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_title",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicate_titles",
+        "description": "bibtex stuff.remove_duplicate_titles",
+        "peekOfCode": "def normalize_title(title):\n    \"\"\"Lowercase and remove punctuation for better duplicate detection.\"\"\"\n    t = title.lower()\n    t = re.sub(r'[^a-z0-9\\s]', '', t)\n    t = re.sub(r'\\s+', ' ', t).strip()\n    return t\n# --- Split a BibTeX file into entries ---\ndef split_entries(content):\n    entries = re.split(r'(?=@\\w+)', content)\n    return [e.strip() for e in entries if e.strip()]",
+        "detail": "bibtex stuff.remove_duplicate_titles",
+        "documentation": {}
+    },
+    {
+        "label": "split_entries",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicate_titles",
+        "description": "bibtex stuff.remove_duplicate_titles",
+        "peekOfCode": "def split_entries(content):\n    entries = re.split(r'(?=@\\w+)', content)\n    return [e.strip() for e in entries if e.strip()]\n# --- Check and remove duplicate titles ---\ndef remove_duplicate_titles(bib_path, output_path):\n    with open(bib_path, 'r', encoding='utf-8') as f:\n        content = f.read()\n    entries = split_entries(content)\n    title_map = {}\n    unique_entries = []",
+        "detail": "bibtex stuff.remove_duplicate_titles",
+        "documentation": {}
+    },
+    {
+        "label": "remove_duplicate_titles",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicate_titles",
+        "description": "bibtex stuff.remove_duplicate_titles",
+        "peekOfCode": "def remove_duplicate_titles(bib_path, output_path):\n    with open(bib_path, 'r', encoding='utf-8') as f:\n        content = f.read()\n    entries = split_entries(content)\n    title_map = {}\n    unique_entries = []\n    duplicates = []\n    for entry in entries:\n        title = extract_title(entry)\n        if not title:",
+        "detail": "bibtex stuff.remove_duplicate_titles",
+        "documentation": {}
+    },
+    {
+        "label": "extract_doi",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicates_from_doi",
+        "description": "bibtex stuff.remove_duplicates_from_doi",
+        "peekOfCode": "def extract_doi(entry_text):\n    match = re.search(\n        r'doi\\s*=\\s*[{\"]?\\s*([^}\",\\s]+)\\s*[\"}]?',\n        entry_text,\n        re.IGNORECASE\n    )\n    if match:\n        return match.group(1).strip().lower()\n    return None\n# --- Extract title from one BibTeX entry (optional, for reporting) ---",
+        "detail": "bibtex stuff.remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "extract_title",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicates_from_doi",
+        "description": "bibtex stuff.remove_duplicates_from_doi",
+        "peekOfCode": "def extract_title(entry_text):\n    match = re.search(\n        r'title\\s*=\\s*[{\"]\\s*(.*?)\\s*[\"}]',\n        entry_text,\n        re.IGNORECASE | re.DOTALL\n    )\n    if match:\n        # Clean up whitespace and LaTeX braces\n        return re.sub(r'\\s+', ' ', match.group(1).strip().replace('\\n', ' '))\n    return \"(No Title Found)\"",
+        "detail": "bibtex stuff.remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "extract_entries_from_bibtex",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicates_from_doi",
+        "description": "bibtex stuff.remove_duplicates_from_doi",
+        "peekOfCode": "def extract_entries_from_bibtex(file_path):\n    with open(file_path, 'r', encoding='utf-8') as f:\n        content = f.read()\n    # Split entries by '@' but keep the '@' for clarity\n    entries = re.split(r'(?=@\\w+)', content)\n    entries = [e.strip() for e in entries if e.strip()]  # remove empties\n    doi_entry_map = {}\n    no_doi_entries = []\n    duplicate_entries = []  # (doi, title) for reporting\n    for entry in entries:",
+        "detail": "bibtex stuff.remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "merge_bibtex_files",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicates_from_doi",
+        "description": "bibtex stuff.remove_duplicates_from_doi",
+        "peekOfCode": "def merge_bibtex_files(file_paths):\n    merged_dois = {}\n    merged_no_doi = []\n    all_duplicates = []\n    for file_path in file_paths:\n        print(f\"📚 Processing: {file_path}\")\n        doi_entry_map, no_doi_entries, duplicates = extract_entries_from_bibtex(file_path)\n        for doi, entry in doi_entry_map.items():\n            if doi not in merged_dois:\n                merged_dois[doi] = entry",
+        "detail": "bibtex stuff.remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "save_unique_entries",
+        "kind": 2,
+        "importPath": "bibtex stuff.remove_duplicates_from_doi",
+        "description": "bibtex stuff.remove_duplicates_from_doi",
+        "peekOfCode": "def save_unique_entries(doi_entry_map, no_doi_entries, output_path):\n    with open(output_path, 'w', encoding='utf-8') as f:\n        for entry in doi_entry_map.values():\n            f.write(entry.strip() + \"\\n\\n\")\n        for entry in no_doi_entries:\n            f.write(entry.strip() + \"\\n\\n\")\n    print(f\"✅ Saved {len(doi_entry_map)} unique DOI entries \"\n          f\"+ {len(no_doi_entries)} entries without DOI \"\n          f\"→ {output_path}\")\n# --- Example usage ---",
+        "detail": "bibtex stuff.remove_duplicates_from_doi",
+        "documentation": {}
+    },
+    {
+        "label": "is_expired",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def is_expired(cert: Certificate) -> bool:\n    \"\"\"Return True if certificate is already expired.\"\"\"\n    v = cert.validity\n    # Support both: object with .end and dict with [\"end\"]\n    if isinstance(v, dict):\n        end_value = v.get(\"end\")\n    else:\n        end_value = getattr(v, \"end\", None)\n    if not end_value:\n        # Decide policy: treat as expired or raise",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "days_until_expiry",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def days_until_expiry(cert: Certificate) -> int:\n    \"\"\"Return number of days until expiry (negative if already expired).\"\"\"\n    v = cert.validity\n    # Support both: object with .end and dict with [\"end\"]\n    if isinstance(v, dict):\n        end_value = v.get(\"end\")\n    else:\n        end_value = getattr(v, \"end\", None)\n    if not end_value:\n        # Decide what you want here: raise or use a default",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "compute_certificate_features",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def compute_certificate_features(cert: Certificate) -> CertificateFeatures:\n    \"\"\"Compute and return features for a given certificate.\"\"\"\n    # SAN-related features\n    san = cert.extensions.subject_alt_name.dns_names if cert.extensions.subject_alt_name else []\n    num_san_dns_names = len(san)\n    san_has_wildcard_dns = any(n.startswith(\"*.\") for n in san)\n    san_has_exact_subdomain_dns = any(\".\" in n and not n.startswith(\"*.\") for n in san)\n    # Time-related features\n    days_left = days_until_expiry(cert)\n    valid_time_so_far_days = (datetime.now(timezone.utc) - _parse_iso_z(cert.validity.start)).days",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "print_certificate_summary",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def print_certificate_summary(cert: Certificate) -> None:\n    \"\"\"Print a one-certificate human-readable summary.\"\"\"\n    print(f\"Subject DN   : {cert.subject_dn}\")\n    print(f\"Issuer DN    : {cert.issuer_dn}\")\n    print(f\"Validation   : {cert.validation_level}\")\n    print(f\"Valid from   : {cert.validity.start}\")\n    print(f\"Valid until  : {cert.validity.end}\")\n    expired = is_expired(cert)\n    days_left = days_until_expiry(cert)\n    status = \"EXPIRED\" if expired else f\"{days_left} days left\"",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "print_certificate_features",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def print_certificate_features(cert: Certificate) -> None:\n    \"\"\"Print the computed features of a certificate.\"\"\"\n    features = cert.features\n    if not features:\n        print(\"No features computed for this certificate.\")\n        return\n    print(f\"Number of SAN DNS names       : {features.num_san_dns_names}\")\n    print(f\"Has wildcard SAN              : {features.san_has_wildcard_dns}\")\n    print(f\"Has exact subdomain SAN       : {features.san_has_exact_subdomain_dns}\")\n    print(f\"Days until expiry             : {features.days_until_expiry}\")",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "print_certificate_details",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def print_certificate_details(cert: Certificate) -> None:\n    \"\"\"Print detailed information about the certificate.\"\"\"\n    print(f\"Subject DN        : {cert.subject_dn}\")\n    print(f\"Issuer DN         : {cert.issuer_dn}\")\n    print(f\"Serial Number     : {cert.serial_number}\")\n    print(f\"Version           : {cert.version}\")\n    print(f\"Validation Level  : {cert.validation_level}\")\n    print(f\"Validity Period   : {cert.validity.start} to {cert.validity.end}\")\n    print(f\"Signature Alg     : {cert.signature_algorithm.name}\")\n    print(f\"Names             : {', '.join(cert.names) if cert.names else '(none)'}\")",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "analyze_netlas_result",
+        "kind": 2,
+        "importPath": "cert_analyzer.analysis.basic_analysis",
+        "description": "cert_analyzer.analysis.basic_analysis",
+        "peekOfCode": "def analyze_netlas_result(result: NetlasResult) -> None:\n    for item in result.items:\n        cert = item.data.certificate\n        print_certificate_details(cert)",
+        "detail": "cert_analyzer.analysis.basic_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "Certificate",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.certificates",
+        "description": "cert_analyzer.models.certificates",
+        "peekOfCode": "class Certificate:\n    issuer_dn: str\n    subject_dn: str\n    serial_number: str\n    version: int\n    validation_level: Optional[str]\n    src: Optional[str]          \n    redacted: bool\n    subject: Optional[NameEntity]\n    issuer: Optional[NameEntity]",
+        "detail": "cert_analyzer.models.certificates",
+        "documentation": {}
+    },
+    {
+        "label": "SignatureAlgorithm",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.common",
+        "description": "cert_analyzer.models.common",
+        "peekOfCode": "class SignatureAlgorithm:\n    name: str\n    oid: str\n@dataclass\nclass Signature:\n    valid: bool\n    signature_algorithm: SignatureAlgorithm\n    value: str\n    self_signed: bool\n@dataclass",
+        "detail": "cert_analyzer.models.common",
+        "documentation": {}
+    },
+    {
+        "label": "Signature",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.common",
+        "description": "cert_analyzer.models.common",
+        "peekOfCode": "class Signature:\n    valid: bool\n    signature_algorithm: SignatureAlgorithm\n    value: str\n    self_signed: bool\n@dataclass\nclass NameEntity:\n    country: Optional[List[str]] = None\n    organization: Optional[List[str]] = None\n    common_name: Optional[List[str]] = None",
+        "detail": "cert_analyzer.models.common",
+        "documentation": {}
+    },
+    {
+        "label": "NameEntity",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.common",
+        "description": "cert_analyzer.models.common",
+        "peekOfCode": "class NameEntity:\n    country: Optional[List[str]] = None\n    organization: Optional[List[str]] = None\n    common_name: Optional[List[str]] = None\n@dataclass\nclass Validity:\n    length: int\n    start: str\n    end: str\n@dataclass",
+        "detail": "cert_analyzer.models.common",
+        "documentation": {}
+    },
+    {
+        "label": "Validity",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.common",
+        "description": "cert_analyzer.models.common",
+        "peekOfCode": "class Validity:\n    length: int\n    start: str\n    end: str\n@dataclass\nclass Fingerprints:\n    md5: Optional[str] = None\n    sha1: Optional[str] = None\n    sha256: Optional[str] = None\n    tbs: Optional[str] = None",
+        "detail": "cert_analyzer.models.common",
+        "documentation": {}
+    },
+    {
+        "label": "Fingerprints",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.common",
+        "description": "cert_analyzer.models.common",
+        "peekOfCode": "class Fingerprints:\n    md5: Optional[str] = None\n    sha1: Optional[str] = None\n    sha256: Optional[str] = None\n    tbs: Optional[str] = None\n    tbs_noct: Optional[str] = None\n    spki_subject: Optional[str] = None",
+        "detail": "cert_analyzer.models.common",
+        "documentation": {}
+    },
+    {
+        "label": "CertificatePolicy",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class CertificatePolicy:\n    id: str\n@dataclass\nclass KeyUsage:\n    digital_signature: Optional[bool] = None\n    certificate_sign: Optional[bool] = None\n    crl_sign: Optional[bool] = None\n    key_encipherment: Optional[bool] = None\n    value: Optional[int] = None   # raw bitmask\n@dataclass",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "KeyUsage",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class KeyUsage:\n    digital_signature: Optional[bool] = None\n    certificate_sign: Optional[bool] = None\n    crl_sign: Optional[bool] = None\n    key_encipherment: Optional[bool] = None\n    value: Optional[int] = None   # raw bitmask\n@dataclass\nclass ExtendedKeyUsage:\n    client_auth: Optional[bool] = None\n    server_auth: Optional[bool] = None",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "ExtendedKeyUsage",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class ExtendedKeyUsage:\n    client_auth: Optional[bool] = None\n    server_auth: Optional[bool] = None\n@dataclass\nclass BasicConstraints:\n    is_ca: bool\n    max_path_len: Optional[int] = None\n@dataclass\nclass AuthorityInfoAccess:\n    issuer_urls: Optional[List[str]] = None",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "BasicConstraints",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class BasicConstraints:\n    is_ca: bool\n    max_path_len: Optional[int] = None\n@dataclass\nclass AuthorityInfoAccess:\n    issuer_urls: Optional[List[str]] = None\n@dataclass\nclass SubjectAltName:\n    dns_names: Optional[List[str]] = None\n@dataclass",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "AuthorityInfoAccess",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class AuthorityInfoAccess:\n    issuer_urls: Optional[List[str]] = None\n@dataclass\nclass SubjectAltName:\n    dns_names: Optional[List[str]] = None\n@dataclass\nclass SignedCertificateTimestamp:\n    log_id: str\n    signature: str\n    version: int",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "SubjectAltName",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class SubjectAltName:\n    dns_names: Optional[List[str]] = None\n@dataclass\nclass SignedCertificateTimestamp:\n    log_id: str\n    signature: str\n    version: int\n    timestamp: int\n@dataclass\nclass Extensions:",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "SignedCertificateTimestamp",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class SignedCertificateTimestamp:\n    log_id: str\n    signature: str\n    version: int\n    timestamp: int\n@dataclass\nclass Extensions:\n    crl_distribution_points: Optional[List[str]] = None\n    subject_key_id: Optional[str] = None\n    certificate_policies: Optional[List[CertificatePolicy]] = None",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "Extensions",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.extensions",
+        "description": "cert_analyzer.models.extensions",
+        "peekOfCode": "class Extensions:\n    crl_distribution_points: Optional[List[str]] = None\n    subject_key_id: Optional[str] = None\n    certificate_policies: Optional[List[CertificatePolicy]] = None\n    key_usage: Optional[KeyUsage] = None\n    authority_key_id: Optional[str] = None\n    authority_info_access: Optional[AuthorityInfoAccess] = None\n    basic_constraints: Optional[BasicConstraints] = None\n    extended_key_usage: Optional[ExtendedKeyUsage] = None\n    subject_alt_name: Optional[SubjectAltName] = None",
+        "detail": "cert_analyzer.models.extensions",
+        "documentation": {}
+    },
+    {
+        "label": "CertificateFeatures",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.features",
+        "description": "cert_analyzer.models.features",
+        "peekOfCode": "class CertificateFeatures:\n    # Time-related features\n    days_until_expiry: Optional[int] = None\n    valid_time_so_far_days: Optional[int] = None\n    has_expired: Optional[bool] = None\n    # Serial number features\n    serial_number_length: Optional[int] = None\n    # SAN-related features\n    num_san_dns_names: int = 0\n    san_has_wildcard_dns: bool = False",
+        "detail": "cert_analyzer.models.features",
+        "documentation": {}
+    },
+    {
+        "label": "Highlight",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.results",
+        "description": "cert_analyzer.models.results",
+        "peekOfCode": "class Highlight:\n    certificate_subject_dn: Optional[str] = None\n@dataclass\nclass CertificateData:\n    last_updated: str\n    timestamp: str  # @timestamp\n    certificate: Certificate\n@dataclass\nclass CertificateItem:\n    highlight: Highlight",
+        "detail": "cert_analyzer.models.results",
+        "documentation": {}
+    },
+    {
+        "label": "CertificateData",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.results",
+        "description": "cert_analyzer.models.results",
+        "peekOfCode": "class CertificateData:\n    last_updated: str\n    timestamp: str  # @timestamp\n    certificate: Certificate\n@dataclass\nclass CertificateItem:\n    highlight: Highlight\n    data: CertificateData\n    #index_id: int\n@dataclass",
+        "detail": "cert_analyzer.models.results",
+        "documentation": {}
+    },
+    {
+        "label": "CertificateItem",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.results",
+        "description": "cert_analyzer.models.results",
+        "peekOfCode": "class CertificateItem:\n    highlight: Highlight\n    data: CertificateData\n    #index_id: int\n@dataclass\nclass NetlasResult:\n    items: List[CertificateItem]",
+        "detail": "cert_analyzer.models.results",
+        "documentation": {}
+    },
+    {
+        "label": "NetlasResult",
+        "kind": 6,
+        "importPath": "cert_analyzer.models.results",
+        "description": "cert_analyzer.models.results",
+        "peekOfCode": "class NetlasResult:\n    items: List[CertificateItem]",
+        "detail": "cert_analyzer.models.results",
+        "documentation": {}
+    },
+    {
+        "label": "parse_iso",
+        "kind": 2,
+        "importPath": "cert_analyzer.keep_most_recent_cert",
+        "description": "cert_analyzer.keep_most_recent_cert",
+        "peekOfCode": "def parse_iso(ts: str) -> datetime:\n    \"\"\"Parse ISO 8601 string with trailing 'Z' into datetime.\"\"\"\n    return datetime.fromisoformat(ts.replace(\"Z\", \"+00:00\"))\ndef get_timestamp(entry):\n    \"\"\"Safely get the timestamp string or return None.\"\"\"\n    try:\n        return entry[\"data\"][\"timestamp\"]\n    except (KeyError, TypeError):\n        return None\ndef keep_only_latest_in_file(path: str) -> None:",
+        "detail": "cert_analyzer.keep_most_recent_cert",
+        "documentation": {}
+    },
+    {
+        "label": "get_timestamp",
+        "kind": 2,
+        "importPath": "cert_analyzer.keep_most_recent_cert",
+        "description": "cert_analyzer.keep_most_recent_cert",
+        "peekOfCode": "def get_timestamp(entry):\n    \"\"\"Safely get the timestamp string or return None.\"\"\"\n    try:\n        return entry[\"data\"][\"timestamp\"]\n    except (KeyError, TypeError):\n        return None\ndef keep_only_latest_in_file(path: str) -> None:\n    new_folder = os.path.join(os.path.dirname(path), \"most_recents\")\n    os.makedirs(new_folder, exist_ok=True)\n    new_file_path = os.path.join(new_folder, os.path.basename(path))",
+        "detail": "cert_analyzer.keep_most_recent_cert",
+        "documentation": {}
+    },
+    {
+        "label": "keep_only_latest_in_file",
+        "kind": 2,
+        "importPath": "cert_analyzer.keep_most_recent_cert",
+        "description": "cert_analyzer.keep_most_recent_cert",
+        "peekOfCode": "def keep_only_latest_in_file(path: str) -> None:\n    new_folder = os.path.join(os.path.dirname(path), \"most_recents\")\n    os.makedirs(new_folder, exist_ok=True)\n    new_file_path = os.path.join(new_folder, os.path.basename(path))\n    with open(path, \"r\", encoding=\"utf-8\") as f:\n        data = json.load(f)\n    if not isinstance(data, list) or not data:\n        print(f\"{path}: not a non-empty list, writing as-is to {new_file_path}\")\n        with open(new_file_path, \"w\", encoding=\"utf-8\") as f:\n            json.dump(data, f, indent=2)",
+        "detail": "cert_analyzer.keep_most_recent_cert",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "cert_analyzer.keep_most_recent_cert",
+        "description": "cert_analyzer.keep_most_recent_cert",
+        "peekOfCode": "def main():\n    for filename in os.listdir(INPUT_DIR):\n        if not filename.endswith(\".json\"):\n            continue\n        filepath = os.path.join(INPUT_DIR, filename)\n        keep_only_latest_in_file(filepath)\nif __name__ == \"__main__\":\n    main()",
+        "detail": "cert_analyzer.keep_most_recent_cert",
+        "documentation": {}
+    },
+    {
+        "label": "INPUT_DIR",
+        "kind": 5,
+        "importPath": "cert_analyzer.keep_most_recent_cert",
+        "description": "cert_analyzer.keep_most_recent_cert",
+        "peekOfCode": "INPUT_DIR = \"./data/netlas_certs_blocked_no_duplicates\"  \ndef parse_iso(ts: str) -> datetime:\n    \"\"\"Parse ISO 8601 string with trailing 'Z' into datetime.\"\"\"\n    return datetime.fromisoformat(ts.replace(\"Z\", \"+00:00\"))\ndef get_timestamp(entry):\n    \"\"\"Safely get the timestamp string or return None.\"\"\"\n    try:\n        return entry[\"data\"][\"timestamp\"]\n    except (KeyError, TypeError):\n        return None",
+        "detail": "cert_analyzer.keep_most_recent_cert",
+        "documentation": {}
+    },
+    {
+        "label": "load_domains_from_csv",
+        "kind": 2,
+        "importPath": "cert_analyzer.load_excel_domains",
+        "description": "cert_analyzer.load_excel_domains",
+        "peekOfCode": "def load_domains_from_csv(file_path, sheet_name='Sheet1', column_name='Domain'):\n    df = pd.read_csv(file_path,sep=';')\n    domains = df[column_name].dropna().tolist()\n    return domains\ndef get_blocked_domains() -> list[str]:\n    base_dir = Path(__file__).resolve().parent\n    project_root = base_dir.parent\n    data_dir = project_root / \"data\"\n    csv_path = data_dir / \"popular_domain_features.csv\"\n    return load_domains_from_csv(csv_path)",
+        "detail": "cert_analyzer.load_excel_domains",
+        "documentation": {}
+    },
+    {
+        "label": "get_blocked_domains",
+        "kind": 2,
+        "importPath": "cert_analyzer.load_excel_domains",
+        "description": "cert_analyzer.load_excel_domains",
+        "peekOfCode": "def get_blocked_domains() -> list[str]:\n    base_dir = Path(__file__).resolve().parent\n    project_root = base_dir.parent\n    data_dir = project_root / \"data\"\n    csv_path = data_dir / \"popular_domain_features.csv\"\n    return load_domains_from_csv(csv_path)",
+        "detail": "cert_analyzer.load_excel_domains",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_total_results",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def fetch_total_results(connection, query, datatype=\"cert\"):\n    \"\"\"Get the total number of results for the query.\"\"\"\n    total = connection.count(query, datatype=datatype)\n    return total.get(\"count\", 0)\ndef fetch_page_results(connection, query, page, datatype=\"cert\"):\n    \"\"\"Request one page of results.\"\"\"\n    return connection.search(query, datatype=datatype, page=page)\ndef get_netlas_client() -> netlas.Netlas:\n    \"\"\"Create and return an authenticated Netlas client using NETLAS_API_KEY.\"\"\"\n    api_key = os.getenv(\"NETLAS_API_KEY\")",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_page_results",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def fetch_page_results(connection, query, page, datatype=\"cert\"):\n    \"\"\"Request one page of results.\"\"\"\n    return connection.search(query, datatype=datatype, page=page)\ndef get_netlas_client() -> netlas.Netlas:\n    \"\"\"Create and return an authenticated Netlas client using NETLAS_API_KEY.\"\"\"\n    api_key = os.getenv(\"NETLAS_API_KEY\")\n    if not api_key:\n        raise EnvironmentError(\"NETLAS_API_KEY is not set in the environment variables.\")\n    return netlas.Netlas(api_key)\ndef build_certificate_query(domain: str) -> str:",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "get_netlas_client",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def get_netlas_client() -> netlas.Netlas:\n    \"\"\"Create and return an authenticated Netlas client using NETLAS_API_KEY.\"\"\"\n    api_key = os.getenv(\"NETLAS_API_KEY\")\n    if not api_key:\n        raise EnvironmentError(\"NETLAS_API_KEY is not set in the environment variables.\")\n    return netlas.Netlas(api_key)\ndef build_certificate_query(domain: str) -> str:\n    \"\"\"Build the Netlas search query for certificates matching a domain.\"\"\"\n    return f\"certificate.subject_dn:{domain}\"\ndef fetch_all_certificate_results(domain: str, results_per_page: int = 20):",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "build_certificate_query",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def build_certificate_query(domain: str) -> str:\n    \"\"\"Build the Netlas search query for certificates matching a domain.\"\"\"\n    return f\"certificate.subject_dn:{domain}\"\ndef fetch_all_certificate_results(domain: str, results_per_page: int = 20):\n    \"\"\"\n    Generator that yields parsed certificate results for all pages\n    of a Netlas search for the given domain.\n    \"\"\"\n    client = get_netlas_client()\n    query = build_certificate_query(domain)",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_all_certificate_results",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def fetch_all_certificate_results(domain: str, results_per_page: int = 20):\n    \"\"\"\n    Generator that yields parsed certificate results for all pages\n    of a Netlas search for the given domain.\n    \"\"\"\n    client = get_netlas_client()\n    query = build_certificate_query(domain)\n    total_results = fetch_total_results(client, query)\n    if total_results == 0:\n        print(f\"No results found for domain: {domain}\")",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "save_certificates_of_a_domain_in_json",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def save_certificates_of_a_domain_in_json(domain: str, certificates: list, output_folder: str = \"popular_domain_certs\"):\n    os.makedirs(output_folder, exist_ok=True)\n    # Flatten certs and insert domain field\n    all_rows = []\n    for cert in certificates:\n        row = asdict(cert)\n        row[\"domain\"] = domain\n        all_rows.append(row)\n    out_path = f\"{output_folder}/{domain}.json\"\n    with open(out_path, \"w\", encoding=\"utf-8\") as f:",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "extract_and_analyze_certificates",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def extract_and_analyze_certificates(searching_domain: str):\n    \"\"\"Fetch, analyze, and return all certificates for a domain.\"\"\"\n    all_certs = []\n    for parsed_page in fetch_all_certificate_results(searching_domain):\n        analyze_netlas_result(parsed_page)\n        all_certs.extend(parsed_page.items)  # Collect certificates from NetlasResult\n    return all_certs\ndef keep_the_latest_certificate(certificates: list):\n    \"\"\"\n    Keep only the certificate with the most recent end date.",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "keep_the_latest_certificate",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def keep_the_latest_certificate(certificates: list):\n    \"\"\"\n    Keep only the certificate with the most recent end date.\n    Returns the most recent certificate or None if the list is empty.\n    \"\"\"\n    if not certificates:\n        return None\n    most_recent = None\n    latest_end_date = None\n    for cert in certificates:",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "cert_analyzer.main",
+        "description": "cert_analyzer.main",
+        "peekOfCode": "def main():\n    blocked_domains = get_blocked_domains()\n    for domain in blocked_domains[558:]:\n        print(f\"\\nProcessing domain: {domain}\")\n        certificates = extract_and_analyze_certificates(domain)\n        save_certificates_of_a_domain_in_json(domain, certificates)\nif __name__ == \"__main__\":\n    main()",
+        "detail": "cert_analyzer.main",
+        "documentation": {}
+    },
+    {
+        "label": "parse_netlas_result",
+        "kind": 2,
+        "importPath": "cert_analyzer.netlas_parser",
+        "description": "cert_analyzer.netlas_parser",
+        "peekOfCode": "def parse_netlas_result(\n    raw: Dict[str, Any],\n    searching_domain: Optional[str] = None,\n) -> NetlasResult:\n    items: List[CertificateItem] = []\n    # If \"items\" exists, use it; otherwise treat raw itself as a single item\n    raw_items = raw.get(\"items\")\n    if raw_items is None:\n        raw_items = [raw]\n    for item in raw_items:",
+        "detail": "cert_analyzer.netlas_parser",
+        "documentation": {}
+    },
+    {
+        "label": "filter_tranco",
+        "kind": 2,
+        "importPath": "data_processing.filter_tranco",
+        "description": "data_processing.filter_tranco",
+        "peekOfCode": "def filter_tranco():\n    domain_list = input(\"Insert the path of the domain dataset .dk domains): \").strip()\n    tranco_list = input(\"Insert the path of the tranco dataset: \").strip()\n    output = input(\"Insert the path of the output: \").strip()\n    dk_domain_list = pd.read_csv(domain_list)\n    tranco_list= pd.read_csv(tranco_list, header=None)\n    dk_domain_list[\"Domæne\"] = dk_domain_list[\"Domæne\"].str.lower()\n    tranco_list[1] = tranco_list[1].str.lower()\n    filtered_dk_list = dk_domain_list[dk_domain_list[\"Domæne\"].isin(tranco_list[1])]\n    filtered_dk_list[\"label\"]=\"popular\"",
+        "detail": "data_processing.filter_tranco",
+        "documentation": {}
+    },
+    {
+        "label": "parse_timestamp",
+        "kind": 2,
+        "importPath": "data_processing.keep_one_cert",
+        "description": "data_processing.keep_one_cert",
+        "peekOfCode": "def parse_timestamp(ts_str):\n    \"\"\"\n    Convert a timestamp string from your JSON to a datetime object\n    \"\"\"\n    if ts_str is None:\n        return None\n    try:\n        # handle Z suffix\n        return datetime.fromisoformat(ts_str.replace(\"Z\", \"+00:00\"))\n    except Exception as e:",
+        "detail": "data_processing.keep_one_cert",
+        "documentation": {}
+    },
+    {
+        "label": "keep_one_cert",
+        "kind": 2,
+        "importPath": "data_processing.keep_one_cert",
+        "description": "data_processing.keep_one_cert",
+        "peekOfCode": "def keep_one_cert():\n    abuse_csv=input(\"Enter the path to the phishing CSV file: \").strip()\n    json_folder = input(\"Enter the path to the folder with JSON files: \").strip()\n    output_folder = input(\"Enter the output folder path: \").strip()\n    df=pd.read_csv(abuse_csv)\n    df[\"added\"]=pd.to_datetime(df[\"added\"], utc=True)\n    abuse_dates=dict(zip(df[\"domain_name\"], df[\"added\"]))\n    # --- PREPARE OUTPUT FOLDER ---\n    dst = Path(output_folder)\n    dst.mkdir(exist_ok=True)",
+        "detail": "data_processing.keep_one_cert",
+        "documentation": {}
+    },
+    {
+        "label": "most_recent_cert",
+        "kind": 2,
+        "importPath": "data_processing.keep_one_cert",
+        "description": "data_processing.keep_one_cert",
+        "peekOfCode": "def most_recent_cert():\n    #abuse_csv=input(\"Enter the path to the abuse CSV file: \").strip()\n    json_folder = input(\"Enter the path to the folder with JSON files: \").strip()\n    output_folder = input(\"Enter the output folder path: \").strip()\n    # --- PREPARE OUTPUT FOLDER ---\n    dst = Path(output_folder)\n    dst.mkdir(exist_ok=True)\n    # --- PROCESS JSON FILES ---\n    src = Path(json_folder)\n    json_files = list(src.glob(\"*.json\"))",
+        "detail": "data_processing.keep_one_cert",
+        "documentation": {}
+    },
+    {
+        "label": "extract_features",
+        "kind": 2,
+        "importPath": "data_processing.keep_one_cert",
+        "description": "data_processing.keep_one_cert",
+        "peekOfCode": "def extract_features(cert):\n    flattened= {}\n    issuer = cert.get(\"issuer\", {})\n    flattened[\"issuer_dn\"] = cert.get(\"issuer_dn\")\n    flattened[\"issuer_country\"] = \",\".join(issuer.get(\"country\", [])) if issuer.get(\"country\") else None\n    flattened[\"issuer_organization\"] = \",\".join(issuer.get(\"organization\", [])) if issuer.get(\"organization\") else None\n    flattened[\"issuer_common_name\"] = \",\".join(issuer.get(\"common_name\", [])) if issuer.get(\"common_name\") else None\n    # subject\n    subject = cert.get(\"subject\", {})\n    flattened[\"subject_dn\"] = cert.get(\"subject_dn\")",
+        "detail": "data_processing.keep_one_cert",
+        "documentation": {}
+    },
+    {
+        "label": "convert_to_csv",
+        "kind": 2,
+        "importPath": "data_processing.keep_one_cert",
+        "description": "data_processing.keep_one_cert",
+        "peekOfCode": "def convert_to_csv():\n    csv_path = input(\"Enter the path to the csv dataset: \").strip() # for general information (features will be added to this)\n    json_folder_path = input(\"Enter the path to the folder with JSON files: \").strip()\n    output_csv = input(\"Enter the output CSV file path: \").strip()\n    df= pd.read_csv(csv_path)\n    # process json folder\n    json_folder = Path(json_folder_path)\n    cert_rows=[]\n    for file in json_folder.glob(\"*.json\"):\n        domain = file.stem",
+        "detail": "data_processing.keep_one_cert",
+        "documentation": {}
+    },
+    {
+        "label": "merge_features",
+        "kind": 2,
+        "importPath": "data_processing.merge_features",
+        "description": "data_processing.merge_features",
+        "peekOfCode": "def merge_features():\n    domain_features_path = input(\"Enter the path for domain_features.csv: \")\n    cert_features_path = input(\"Enter the path for cert_features.csv: \")\n    output_path = input(\"Enter the output path for merged features csv: \")\n    domain_df = pd.read_csv(domain_features_path)\n    cert_df = pd.read_csv(cert_features_path)\n    merged= pd.merge(cert_df, domain_df, on=[\"BrugerId\", \"Domæne\", \"OprettetDato\", \"RegistrantValideret\", \"RegistrantLand\", \"label\"], how='left')\n    merged.to_csv(output_path, index=False)\nif __name__==\"__main__\":\n    merge_features()",
+        "detail": "data_processing.merge_features",
+        "documentation": {}
+    },
+    {
+        "label": "filter_phish",
+        "kind": 2,
+        "importPath": "data_processing.remove_duplicates",
+        "description": "data_processing.remove_duplicates",
+        "peekOfCode": "def filter_phish(data):\n    filtered_data=data[data['category']=='Phishing']\n    output_path=input(\"Enter output path for filtered data...\")\n    filtered_data.to_csv(output_path,index=False)\nif __name__==\"__main__\":\n    path=input(\"Press enter input path...(csv): \")\n    data=pandas.read_csv(path)\n    # data.drop_duplicates(subset=[\"domain_name\"],keep=\"first\", inplace=True)\n    # data.to_csv(path,index=False)\n    filter_phish(data)",
+        "detail": "data_processing.remove_duplicates",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def load(popular_path, malicious_path, unpopular_path):\n    popular_df = pd.read_csv(popular_path)\n    phishing_df = pd.read_csv(malicious_path)\n    unpopular_df = pd.read_csv(unpopular_path)\n    popular_df['label'] = 0\n    phishing_df['label'] = 1\n    unpopular_df['label'] = 2\n    df = pd.concat([popular_df, phishing_df, unpopular_df], axis=0, ignore_index=True)\n    #df = pd.concat([popular_df, malicious_df,], axis=0, ignore_index=True)\n    # Convert categorical columns to appropriate types",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "registrant_countries",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def registrant_countries(data):\n    # country_counts = data['RegistrantLand'].value_counts()\n    # sum= country_counts.sum()\n    # print(\"Registrant Countries count:\")\n    # print(country_counts)\n    # popular_country_counts = data[data['label'] == 0]['RegistrantLand'].value_counts().sum()\n    # malicious_country_counts = data[data['label'] == 1]['RegistrantLand'].value_counts().sum()\n    # print(f\"Popular Domains: {popular_country_counts} ({(popular_country_counts/sum)*100:.2f}%)\")\n    # print(f\"Malicious Domains: {malicious_country_counts} ({(malicious_country_counts/sum)*100:.2f}%)\")\n    country_count_by_label = data.groupby('label')['RegistrantLand'].apply(lambda x: x[x != 'Unknown'].count())",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "hosting_providers",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def hosting_providers(data):\n    # provider_counts = data['hosting_asn'].value_counts()\n    # sum= provider_counts.sum()\n    # print(\"Hosting Providers counts:\")\n    # print(provider_counts)\n    # popular_asn_counts = data[data['label'] == 0]['hosting_asn'].value_counts().sum()\n    # malicious_asn_counts = data[data['label'] == 1]['hosting_asn'].value_counts().sum()\n    # print(f\"Popular Domains: {popular_asn_counts} ({(popular_asn_counts/sum)*100:.2f}%)\")\n    # print(f\"Malicious Domains: {malicious_asn_counts} ({(malicious_asn_counts/sum)*100:.2f}%)\")\n    hosting_count_by_label = data.groupby('label')['hosting_provider'].apply(lambda x: x[x != 'Unknown'].count())",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "top_20_hosting_providers",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def top_20_hosting_providers(data):\n    #data[\"hosting_provider\"] = data[\"hosting_provider\"].apply(lambda x: np.nan if x == \"Unknown\" else x)\n    #top_20_providers = data['hosting_provider'].value_counts().dropna().head(20)\n    unique_providers = data['hosting_provider'].nunique()\n    print(f\"Number of unique hosting providers: {unique_providers}\")\n    top_providers = data[data['hosting_provider'] != \"Unknown\"]['hosting_provider'].value_counts()\n    top_providers = top_providers.head(min(20, len(top_providers)))\n    plt.figure(figsize=(12, 6))\n    sns.barplot(y=top_providers.index, x=top_providers.values, palette='viridis')\n    plt.xticks(rotation=45)",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "provider_country_total",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def provider_country_total(data):\n    country_count=data[\"hosting_provider_country\"].value_counts()\n    top_countries=country_count.head(8)\n    plt.figure(figsize=(8,8))\n    plt.pie(top_countries, labels=top_countries.index, autopct='%1.1f%%', startangle=140, colors=sns.color_palette('Set2', len(top_countries)))\n    plt.title('Top 10 Hosting Provider Countries')\n    plt.axis('equal')\n    plt.show()\ndef provider_country_cat(data): \n    hosting_count_by_label = data.groupby('label')['hosting_provider_country'].apply(lambda x: x[x != 'Unknown'].count())",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "provider_country_cat",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def provider_country_cat(data): \n    hosting_count_by_label = data.groupby('label')['hosting_provider_country'].apply(lambda x: x[x != 'Unknown'].count())\n    print(f\"[INFO] Count of non-null 'hosting_provider_country' per label:\\n{hosting_count_by_label}\\n\")\n    data[\"hosting_provider_country\"] = data[\"hosting_provider_country\"].apply(lambda x: np.nan if x == \"Unknown\" else x)\n    top_5_popular = data[data['label'] == 0]['hosting_provider_country'].value_counts().dropna().head(10)\n    top_5_phishing = data[data['label'] == 1]['hosting_provider_country'].value_counts().dropna().head(10)\n    top_5_unpopular = data[data['label'] == 2]['hosting_provider_country'].value_counts().dropna().head(10)\n    #fig, axs = plt.subplots(1, 2, figsize=(15, 5))\n    fig, axs = plt.subplots(1, 3, figsize=(15, 5))\n    top_5_popular.plot(kind='bar', ax=axs[0], color='b')",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "plot_numerical_feature_distributions",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def plot_numerical_feature_distributions(df, continuous_features):\n    num_features=len(continuous_features)\n    plt.figure(figsize=(15, 10))\n    for i, feature in enumerate(continuous_features, 1):\n        plt.subplot((num_features + 2) // 3, 3, i)\n        sns.histplot(x=feature, data=df, hue=\"label\", kde=False ,stat=\"probability\", bins=30, common_norm=False, palette=['blue', 'purple', 'salmon'])\n        plt.title(f'{feature} Distribution')\n        plt.tight_layout()\n    plt.show()\ndef kde_distirbution(df, feature):",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "kde_distirbution",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def kde_distirbution(df, feature):\n    plt.figure(figsize=(15, 12))\n    for i, feature in enumerate(continuous_features, 1):\n        plt.subplot(4, 3, i)\n        sns.kdeplot(\n            data=df, \n            x=feature, \n            hue=\"label\",           # Separate by class\n            fill=True,             # Fill area under KDE curve\n            common_norm=False,     # Normalize each class separately",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "boolean_features_distribution",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def boolean_features_distribution(df, boolean_features):\n    num_features=len(boolean_features)\n    plt.figure(figsize=(15, 10))\n    for i,feature in enumerate(boolean_features,1):\n        plt.subplot((num_features + 2) // 3, 3, i)\n        sns.countplot(data=df, x=feature, hue='label', palette=['blue', 'purple', 'salmon'])\n        plt.title(f'{feature} Distribution by Label')\n        plt.xlabel(feature)\n        plt.ylabel('Count')\n        plt.xticks(rotation=45)",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "top_5_keywords",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def top_5_keywords(data):\n    data[\"suspicious_keywords\"] = data[\"suspicious_keywords\"].apply(lambda x: np.nan if x == \"[]\" else x)\n    top_5_popular = data[data['label'] == 0]['suspicious_keywords'].value_counts().dropna().head(5)\n    top_5_phishing = data[data['label'] == 1]['suspicious_keywords'].value_counts().dropna().head(5)\n    top_5_unpopular = data[data['label'] == 2]['suspicious_keywords'].value_counts().dropna().head(5)\n    fig, axs = plt.subplots(1, 3, figsize=(15, 5))\n    top_5_popular.plot(kind='bar', ax=axs[0], color='b')\n    axs[0].set_title('Top 5 sus keywords - Popular')\n    axs[0].set_xlabel('suspicious keywords')\n    axs[0].set_ylabel('Frequency')",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "plot_dns_ttl",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def plot_dns_ttl(data):\n    plt.figure(figsize=(10, 6))\n    sns.histplot(data=data, x='dns_ttl', hue='label', bins=30, stat='probability', common_norm=False, palette=['blue', 'purple', 'salmon'])\n    #plt.yscale('log')\n    plt.title('DNS TTL Distribution')\n    plt.xlabel('DNS TTL')\n    plt.ylabel('probability')\n    plt.show()\ndef main():\n    # read and Load dataset",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "def main():\n    # read and Load dataset\n    popular_path= input(\"Enter path of popular dataset: \").strip()\n    phishing_path= input(\"Enter path of phishing dataset: \").strip()\n    unpopular_path= input(\"Enter path of unpopular dataset: \").strip()\n    data = load(popular_path, phishing_path, unpopular_path)\n    # display registrant countries\n    registrant_countries(data)\n    # display hosting providers\n    hosting_providers(data)",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "continuous_features",
+        "kind": 5,
+        "importPath": "domain_analyzer.analysis_domain",
+        "description": "domain_analyzer.analysis_domain",
+        "peekOfCode": "continuous_features = [\"shannon_entropy\", \"token_count\", \"hyphen_count\", \"length\", \n                       \"subdomain_count\", \"mean_subdomain_length\", \"unique_char_count_domain\", \n                       \"special_chars\", \"fraction_vowels\", \"fraction_digits\", \"suspicious_keywords_count\"]\nboolean_features=[\"brand_inclusion\", \"idn_punycode\", \"subdomain_only_digits\", \"single_char_subdomains\", \"idn_hymoglyph_bool\"]\ndef load(popular_path, malicious_path, unpopular_path):\n    popular_df = pd.read_csv(popular_path)\n    phishing_df = pd.read_csv(malicious_path)\n    unpopular_df = pd.read_csv(unpopular_path)\n    popular_df['label'] = 0\n    phishing_df['label'] = 1",
+        "detail": "domain_analyzer.analysis_domain",
+        "documentation": {}
+    },
+    {
+        "label": "shannon_entropy",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def shannon_entropy(s):\n    \"\"\"Calculate Shannon entropy of a string.\"\"\"\n    if not s:\n        return 0.0\n    freq = {c: s.count(c) for c in set(s)}\n    length = len(s)\n    return -sum((count/length) * math.log2(count/length) for count in freq.values())\ndef brand_inclusion(domain):\n    domain_lower= domain.lower()\n    return any(brand in domain_lower for brand in brands)",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "brand_inclusion",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def brand_inclusion(domain):\n    domain_lower= domain.lower()\n    return any(brand in domain_lower for brand in brands)\ndef detect_punycode(domain):\n    return domain.startswith(\"xn--\")\ndef detect_homoglyph(domain):\n    domain = domain.lower()\n    homoglyphs_found = []\n    homoglyph_dict = {}\n    #load file from source: https://github.com/codebox/homoglyph/tree/master",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "detect_punycode",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def detect_punycode(domain):\n    return domain.startswith(\"xn--\")\ndef detect_homoglyph(domain):\n    domain = domain.lower()\n    homoglyphs_found = []\n    homoglyph_dict = {}\n    #load file from source: https://github.com/codebox/homoglyph/tree/master\n    with open(\"./chars.txt\", \"r\") as file:\n        lines= file.readlines()\n    for line in lines:",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "detect_homoglyph",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def detect_homoglyph(domain):\n    domain = domain.lower()\n    homoglyphs_found = []\n    homoglyph_dict = {}\n    #load file from source: https://github.com/codebox/homoglyph/tree/master\n    with open(\"./chars.txt\", \"r\") as file:\n        lines= file.readlines()\n    for line in lines:\n        line = line.strip()\n        if not line or line.startswith('#'):",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "get_dns_ttl",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def get_dns_ttl(domain):\n    try:\n        answers= dns.resolver.resolve(domain, 'A')\n        return answers.rrset.ttl\n    except:\n        None\ndef resolve_ip(domain):\n    try:\n        answers= dns.resolver.resolve(domain, 'A')\n        return [str(rdata) for rdata in answers]",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "resolve_ip",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def resolve_ip(domain):\n    try:\n        answers= dns.resolver.resolve(domain, 'A')\n        return [str(rdata) for rdata in answers]\n    except:\n        return []\n# hosting provider\ndef get_asn_info(ip_list):\n    if not ip_list:\n        return None",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "get_asn_info",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def get_asn_info(ip_list):\n    if not ip_list:\n        return None\n    ip = ip_list[0]  # Fix\n    try:\n        r = requests.get(f\"https://ipinfo.io/{ip}/json\", timeout=8)\n        data=r.json()\n        organization= data.get(\"org\")\n        return organization\n    except:",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_domain_age",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def calculate_domain_age(creation_date):\n    \"\"\"Calculate the age of the domain in years.\"\"\"\n    if creation_date:\n        # Parse the creation date\n        creation_date = datetime.strptime(creation_date, '%Y-%m-%dT%H:%M:%S.%fZ')  # Example format, adjust as necessary\n        today = datetime.today()\n        age = today - creation_date\n        return age.days\n    return None\ndef parse_domain_features(domain)-> dict:",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "parse_domain_features",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def parse_domain_features(domain)-> dict:\n    parts = tldextract.extract(domain)\n    domain_name= parts.domain\n    #subdomain features\n    subdomain_count= len(parts.subdomain.split(\".\")) if parts.subdomain else 0  # Exclude the main domain and TLD\n    subdomains = parts.subdomain.split(\".\") if parts.subdomain else []\n    subdomain_length= [len(s) for s in subdomains]\n    #suspicious keywords\n    suspicious_hits = [k for k in sus_keywords if k in domain]\n    sus_count= len(suspicious_hits)",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "parse_whois_feautures",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def parse_whois_feautures(domain, netlas_connection):\n    query = f\"domain:{domain}\"\n    attempt =0\n    total_wait_time=0\n    max_wait_time=180\n    while attempt < 2:\n        try:\n            print(\"Querying WHOIS for domain:\", domain)\n            raw_results = netlas_connection.search(query, datatype=\"whois-domain\")\n            if raw_results and raw_results[\"items\"]:",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "process_domain",
+        "kind": 2,
+        "importPath": "domain_analyzer.extraction",
+        "description": "domain_analyzer.extraction",
+        "peekOfCode": "def process_domain(df, output_path, delay=1):\n    api_key=netlas.helpers.get_api_key()\n    netlas_connection = netlas.Netlas(api_key)\n    results=[]\n    for index, row in df.iterrows():\n        domain= row['Domæne']\n        whois_data= parse_whois_feautures(domain, netlas_connection)\n        domain_data=parse_domain_features(domain)\n        combined_data={**row.to_dict(),**domain_data, **whois_data}\n        results.append(combined_data)",
+        "detail": "domain_analyzer.extraction",
+        "documentation": {}
+    },
+    {
+        "label": "get_filename_from_path",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def get_filename_from_path(file_path: Path) -> str:\n    \"\"\"Extract just the filename from a full path\"\"\"\n    return file_path.name\ndef check_if_json_is_empty(f, json_data, logger, message:str=\"\") -> bool:\n    if json_data is None or json_data == []:\n        logger.error(f\"No certificate in {get_filename_from_path(f)}. {message}\")\n        return True\n    return False\ndef custom_logger() -> logging.Logger:\n    \"\"\"Create a logger to log alerts to console and file.\"\"\"",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_json_is_empty",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def check_if_json_is_empty(f, json_data, logger, message:str=\"\") -> bool:\n    if json_data is None or json_data == []:\n        logger.error(f\"No certificate in {get_filename_from_path(f)}. {message}\")\n        return True\n    return False\ndef custom_logger() -> logging.Logger:\n    \"\"\"Create a logger to log alerts to console and file.\"\"\"\n    logger = logging.getLogger(\"certificate_alerts\")\n    if logger.handlers:\n        return logger",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "custom_logger",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def custom_logger() -> logging.Logger:\n    \"\"\"Create a logger to log alerts to console and file.\"\"\"\n    logger = logging.getLogger(\"certificate_alerts\")\n    if logger.handlers:\n        return logger\n    logger.setLevel(logging.INFO)\n    formatter = logging.Formatter(\"%(asctime)s - %(levelname)s - %(message)s\")\n    ch = logging.StreamHandler()\n    ch.setLevel(logging.INFO)\n    ch.setFormatter(formatter)",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_certificate_lifespan_days",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def calculate_certificate_lifespan_days(certificate: Certificate) -> int:\n    \"\"\"Calculate the total lifespan of a certificate in days.\"\"\"\n    start_str = certificate.validity.get(\"start\")\n    end_str = certificate.validity.get(\"end\")\n    if not start_str or not end_str:\n        return 0\n    start_date = _parse_iso_z(start_str)\n    end_date = _parse_iso_z(end_str)\n    if not start_date or not end_date:\n        return 0",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "get_certs_dir",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def get_certs_dir(category: Literal[\"blocked\", \"popular\", \"unpopular\"]) -> Path:\n    \"\"\"\n    Returns the file path to the directory containing certificates for a \n    specified category (blocked, popular, or unpopular).\n    \"\"\"\n    base_dir = Path(__file__).resolve().parent\n    project_root = base_dir.parent\n    data_dir = project_root / \"data\"\n    # Determine the specific path based on the category\n    if category == \"blocked\":",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "get_blocked_certs_dir",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def get_blocked_certs_dir() -> Path:\n    base_dir = Path(__file__).resolve().parent\n    project_root = base_dir.parent\n    data_dir = project_root / \"data\"\n    blocked_dir = data_dir / \"blocked_certs/most_recents\"\n    return blocked_dir\ndef validate_directory(directory: Path) -> bool:\n    \"\"\"Check if directory exists and is valid\"\"\"\n    if not directory.exists():\n        print(f\"Directory {directory} does not exist\")",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "validate_directory",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def validate_directory(directory: Path) -> bool:\n    \"\"\"Check if directory exists and is valid\"\"\"\n    if not directory.exists():\n        print(f\"Directory {directory} does not exist\")\n        return False\n    return True\ndef parse_certificates(json_data: List[Dict[str, Any]]) -> List[CertificateItem]:\n    \"\"\"\n    Parse certificates from a single JSON data list.\n    Args:",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "parse_certificates",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def parse_certificates(json_data: List[Dict[str, Any]]) -> List[CertificateItem]:\n    \"\"\"\n    Parse certificates from a single JSON data list.\n    Args:\n        json_data: List of certificate dictionaries\n    Returns:\n        List of parsed CertificateItem objects\n    \"\"\"\n    certificates = []\n    for item in json_data:",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "check_for_missing_fields",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def check_for_missing_fields(certificate: Certificate, logger) -> List[str]:\n    \"\"\"Check for missing fields in a certificate and set alerts accordingly.\"\"\"\n    missing_fields = []\n    if not certificate.subject_dn:\n        missing_fields.append(\"subject_dn\")\n    if not certificate.issuer_dn:\n        missing_fields.append(\"issuer_dn\")\n    if not certificate.serial_number:\n        missing_fields.append(\"serial_number\")\n    if not certificate.version:",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "check_if_certificate_is_self_signed",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def check_if_certificate_is_self_signed(certificate: Certificate, logger) -> None:\n    sig = certificate.signature or {}\n    is_self_signed = sig.get(\"self_signed\")\n    if is_self_signed:\n        logger.warning(f\"Certificate {certificate.subject_dn} is self-signed.\")\ndef validation_level_counter(level: str) -> None:\n    \"\"\"Count occurrences of different validation levels (DV, EV, OV).\"\"\"\n    level = level.lower() if level else \"none\"\n    validation_level_counts[level] += 1\n    return",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "validation_level_counter",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def validation_level_counter(level: str) -> None:\n    \"\"\"Count occurrences of different validation levels (DV, EV, OV).\"\"\"\n    level = level.lower() if level else \"none\"\n    validation_level_counts[level] += 1\n    return\n# Statistical Analysis Functions\ndef compute_summary_stats(df: pd.DataFrame, logger) -> pd.DataFrame:\n    \"\"\"\n    Compute summary statistics (mean, median, std, min, max) per category.\n    \"\"\"",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "compute_summary_stats",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def compute_summary_stats(df: pd.DataFrame, logger) -> pd.DataFrame:\n    \"\"\"\n    Compute summary statistics (mean, median, std, min, max) per category.\n    \"\"\"\n    stats_missing = df.groupby(\"label\")[\"missing_count\"].agg([\"mean\", \"median\", \"std\", \"min\", \"max\"])\n    logger.info(Fore.GREEN + \"Summary statistics per category:\" + Style.RESET_ALL)\n    logger.info(f\"\\n{stats_missing}\")\n    plot_summary_statistics(stats_missing, output_folder=\"hypothesis/csv_plots\")\n    return stats_missing\ndef most_common_missing_fields_overall(df: pd.DataFrame, top_n: int = 20) -> Counter:",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "most_common_missing_fields_overall",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def most_common_missing_fields_overall(df: pd.DataFrame, top_n: int = 20) -> Counter:\n    \"\"\"\n    Count most commonly missing fields across all categories.\n    \"\"\"\n    all_fields = Counter()\n    for row in df[\"missing_fields\"]:\n        all_fields.update(row)\n    print(\"Most commonly missing fields (overall):\")\n    for field, count in all_fields.most_common(top_n):\n        print(f\"{field}: {count}\")",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "most_missing_fields_per_category",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def most_missing_fields_per_category(df: pd.DataFrame, top_n: int = 10) -> Dict[str, Counter]:\n    \"\"\"\n    Count most missing fields per category.\n    \"\"\"\n    missing_by_cat = defaultdict(Counter)\n    for _, row in df.iterrows():\n        missing_by_cat[row[\"label\"]].update(row[\"missing_fields\"])\n    print(\"\\nMost missing fields per category:\\n\")\n    for cat, counter in missing_by_cat.items():\n        print(f\"\\nCategory: {cat}\")",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "missing_rate_per_field",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def missing_rate_per_field(df: pd.DataFrame, missing_by_cat: Dict[str, Counter], top_n: int = 10) -> Dict[str, Dict[str, float]]:\n    \"\"\"\n    Compute missing rate (percentage) per field for each category.\n    \"\"\"\n    missing_rate = {}\n    for cat, counter in missing_by_cat.items():\n        total = len(df[df[\"label\"] == cat])\n        missing_rate[cat] = {field: (count / total) * 100 for field, count in counter.items()}\n    print(\"\\nMissing rate (%) per field per category:\\n\")\n    for cat in missing_rate:",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "empty_certificate_analysis",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def empty_certificate_analysis(df: pd.DataFrame, logger) -> None:\n    # Count of empty certificates per category\n    empty_counts = df.groupby(\"label\")[\"no_certificate\"].sum()\n    # Total certificates per category\n    total_counts = df.groupby(\"label\").size()\n    # Percentage of empty certificates per category\n    empty_percentage = (empty_counts / total_counts) * 100\n    # Combine results into a single DataFrame for nicer logging\n    summary_df = pd.DataFrame({\n        \"total_certificates\": total_counts,",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "statistical_analysis",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def statistical_analysis(df: pd.DataFrame, logger) -> None:\n    empty_certificate_analysis(df, logger)\n    compute_summary_stats(df, logger)\n    all_fields = most_common_missing_fields_overall(df)\n    missing_by_cat = most_missing_fields_per_category(df)\n    missing_rate = missing_rate_per_field(df, missing_by_cat)\ndef read_netlas_certs(logger):\n    categories = {\n        \"Blocked\": get_certs_dir(\"blocked\"),\n        \"Popular\": get_certs_dir(\"popular\"),",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "read_netlas_certs",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def read_netlas_certs(logger):\n    categories = {\n        \"Blocked\": get_certs_dir(\"blocked\"),\n        \"Popular\": get_certs_dir(\"popular\"),\n        \"Unpopular\": get_certs_dir(\"unpopular\"),\n    }\n    results = []\n    total_certificates = 0\n    domains_with_certs = 0\n    json_data = []",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "def main():\n    logger = custom_logger()\n    logger.info(\"Starting analysis of blocked Netlas certificates...\")\n    read_netlas_certs(logger)\n    logger.info(\"Completed analysis of blocked Netlas certificates.\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "project_root",
+        "kind": 5,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "project_root = Path(__file__).resolve().parent.parent\nsys.path.insert(0, str(project_root))\nfield_missing_count: Counter[str] = Counter()\ndomain_missing_count: defaultdict[str, list[int]] = defaultdict(list)\nmissing_count_dist: Counter[int] = Counter()\nvalidation_level_counts: Counter[str] = Counter()\nDomainMissingCount = defaultdict[str, list[int]]\ndef get_filename_from_path(file_path: Path) -> str:\n    \"\"\"Extract just the filename from a full path\"\"\"\n    return file_path.name",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "DomainMissingCount",
+        "kind": 5,
+        "importPath": "hypothesis.hypothesis3",
+        "description": "hypothesis.hypothesis3",
+        "peekOfCode": "DomainMissingCount = defaultdict[str, list[int]]\ndef get_filename_from_path(file_path: Path) -> str:\n    \"\"\"Extract just the filename from a full path\"\"\"\n    return file_path.name\ndef check_if_json_is_empty(f, json_data, logger, message:str=\"\") -> bool:\n    if json_data is None or json_data == []:\n        logger.error(f\"No certificate in {get_filename_from_path(f)}. {message}\")\n        return True\n    return False\ndef custom_logger() -> logging.Logger:",
+        "detail": "hypothesis.hypothesis3",
+        "documentation": {}
+    },
+    {
+        "label": "plot_field_stats",
+        "kind": 2,
+        "importPath": "hypothesis.plot_stats_hypothesis_3",
+        "description": "hypothesis.plot_stats_hypothesis_3",
+        "peekOfCode": "def plot_field_stats(csv_file=\"hypothesis/csv_plots/field_stats.csv\", top_n=10):\n    fields = []\n    counts = []\n    with open(csv_file, newline=\"\") as f:\n        reader = csv.DictReader(f)\n        for row in reader:\n            fields.append(row[\"field\"])\n            counts.append(int(row[\"missing_count\"]))\n    # sort and take top N\n    pairs = sorted(zip(fields, counts), key=lambda x: x[1], reverse=True)[:top_n]",
+        "detail": "hypothesis.plot_stats_hypothesis_3",
+        "documentation": {}
+    },
+    {
+        "label": "plot_missing_fields_distribution",
+        "kind": 2,
+        "importPath": "hypothesis.plot_stats_hypothesis_3",
+        "description": "hypothesis.plot_stats_hypothesis_3",
+        "peekOfCode": "def plot_missing_fields_distribution(csv_file=\"hypothesis/csv_plots/missing_count_dist.csv\"):\n    \"\"\"Plot distribution of certificates by number of missing fields\"\"\"\n    num_missing = []\n    num_certs = []\n    with open(csv_file, newline=\"\") as f:\n        reader = csv.DictReader(f)\n        for row in reader:\n            num_missing.append(int(row[\"num_missing_fields\"]))\n            num_certs.append(int(row[\"num_certificates\"]))\n    plt.figure(figsize=(12, 6))",
+        "detail": "hypothesis.plot_stats_hypothesis_3",
+        "documentation": {}
+    },
+    {
+        "label": "plot_overview",
+        "kind": 2,
+        "importPath": "hypothesis.plot_stats_hypothesis_3",
+        "description": "hypothesis.plot_stats_hypothesis_3",
+        "peekOfCode": "def plot_overview(csv_file: str = \"hypothesis/csv_plots/overview_stats.csv\") -> None:\n    labels = []\n    values = []\n    with open(csv_file, newline=\"\") as f:\n        reader = csv.DictReader(f)\n        for row in reader:\n            labels.append(row[\"metric\"])\n            values.append(int(row[\"value\"]))\n    if not values:\n        print(\"No data to plot.\")",
+        "detail": "hypothesis.plot_stats_hypothesis_3",
+        "documentation": {}
+    },
+    {
+        "label": "plot_validation_level_distribution",
+        "kind": 2,
+        "importPath": "hypothesis.plot_stats_hypothesis_3",
+        "description": "hypothesis.plot_stats_hypothesis_3",
+        "peekOfCode": "def plot_validation_level_distribution():\n    \"\"\"Plot distribution of certificates by validation level\"\"\"\n    validation_levels = [\"DV\", \"unknown\", \"OV\", \"EV\"]\n    counts = [38720, 360, 1016, 39]\n    plt.figure(figsize=(8, 6))\n    bars = plt.bar(validation_levels, counts, color=['skyblue', 'lightcoral', 'lightgreen', 'gold'], \n                   edgecolor='black')\n    plt.xlabel(\"Validation Level\", fontsize=12)\n    plt.ylabel(\"Number of Certificates\", fontsize=12)\n    plt.title(\"Distribution of Certificates by Validation Level\", fontsize=14, fontweight='bold')",
+        "detail": "hypothesis.plot_stats_hypothesis_3",
+        "documentation": {}
+    },
+    {
+        "label": "blocklist_df",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "blocklist_df = pd.read_json(\"blocklist.json\")\n# Drop duplicate domain names, keeping the last\nblocklist_df = blocklist_df.drop_duplicates(subset=\"domain_name\", keep=\"last\")\nblocklist_dict = blocklist_df.set_index(\"domain_name\").to_dict(orient=\"index\")\njson_domains = set(blocklist_dict.keys())\nmatched = []\nunmatched = []\nfor chunk in pd.read_csv(\"AUU_projekt.csv\", chunksize=10000):\n    matched_chunk = chunk[chunk[\"Domæne\"].isin(json_domains)]\n    # if the domain is in blocklist, enter",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "blocklist_df",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "blocklist_df = blocklist_df.drop_duplicates(subset=\"domain_name\", keep=\"last\")\nblocklist_dict = blocklist_df.set_index(\"domain_name\").to_dict(orient=\"index\")\njson_domains = set(blocklist_dict.keys())\nmatched = []\nunmatched = []\nfor chunk in pd.read_csv(\"AUU_projekt.csv\", chunksize=10000):\n    matched_chunk = chunk[chunk[\"Domæne\"].isin(json_domains)]\n    # if the domain is in blocklist, enter\n    if not matched_chunk.empty:\n        for _, row in matched_chunk.iterrows():",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "blocklist_dict",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "blocklist_dict = blocklist_df.set_index(\"domain_name\").to_dict(orient=\"index\")\njson_domains = set(blocklist_dict.keys())\nmatched = []\nunmatched = []\nfor chunk in pd.read_csv(\"AUU_projekt.csv\", chunksize=10000):\n    matched_chunk = chunk[chunk[\"Domæne\"].isin(json_domains)]\n    # if the domain is in blocklist, enter\n    if not matched_chunk.empty:\n        for _, row in matched_chunk.iterrows():\n            # iterate through the matched domains in the chunk, grab the info from abusemanager",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "json_domains",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "json_domains = set(blocklist_dict.keys())\nmatched = []\nunmatched = []\nfor chunk in pd.read_csv(\"AUU_projekt.csv\", chunksize=10000):\n    matched_chunk = chunk[chunk[\"Domæne\"].isin(json_domains)]\n    # if the domain is in blocklist, enter\n    if not matched_chunk.empty:\n        for _, row in matched_chunk.iterrows():\n            # iterate through the matched domains in the chunk, grab the info from abusemanager\n            domain = row[\"Domæne\"]",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "matched",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "matched = []\nunmatched = []\nfor chunk in pd.read_csv(\"AUU_projekt.csv\", chunksize=10000):\n    matched_chunk = chunk[chunk[\"Domæne\"].isin(json_domains)]\n    # if the domain is in blocklist, enter\n    if not matched_chunk.empty:\n        for _, row in matched_chunk.iterrows():\n            # iterate through the matched domains in the chunk, grab the info from abusemanager\n            domain = row[\"Domæne\"]\n            csv_entry = row.to_dict()",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "unmatched",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "unmatched = []\nfor chunk in pd.read_csv(\"AUU_projekt.csv\", chunksize=10000):\n    matched_chunk = chunk[chunk[\"Domæne\"].isin(json_domains)]\n    # if the domain is in blocklist, enter\n    if not matched_chunk.empty:\n        for _, row in matched_chunk.iterrows():\n            # iterate through the matched domains in the chunk, grab the info from abusemanager\n            domain = row[\"Domæne\"]\n            csv_entry = row.to_dict()\n            abusemanager_info = blocklist_dict.get(domain, {})",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "result_matched_df",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "result_matched_df = pd.DataFrame(matched)\nresult_unmatched_df = pd.concat(unmatched, ignore_index=True)\nresult_unmatched_df.to_json(\"unmatched.json\", orient=\"records\", indent=2, force_ascii=False)\nresult_matched_df.to_json(\"matched.json\", orient=\"records\", indent=2, force_ascii=False)",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "result_unmatched_df",
+        "kind": 5,
+        "importPath": "scraper.correlator",
+        "description": "scraper.correlator",
+        "peekOfCode": "result_unmatched_df = pd.concat(unmatched, ignore_index=True)\nresult_unmatched_df.to_json(\"unmatched.json\", orient=\"records\", indent=2, force_ascii=False)\nresult_matched_df.to_json(\"matched.json\", orient=\"records\", indent=2, force_ascii=False)",
+        "detail": "scraper.correlator",
+        "documentation": {}
+    },
+    {
+        "label": "parse_json",
+        "kind": 2,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "def parse_json(file):\n    json_list = json.load(file)\n    return json_list\n# create array of domains\n# CHANGE KEY WHEN IS KNOWN\ndef fetch_domains(json_list):\n    domain_list = [d[\"domain\"] for d in json_list]\n    return domain_list\n#\ndef add_headers(headers_list, original_dataset):",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_domains",
+        "kind": 2,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "def fetch_domains(json_list):\n    domain_list = [d[\"domain\"] for d in json_list]\n    return domain_list\n#\ndef add_headers(headers_list, original_dataset):\n    # lookup table (dict)\n    headers_lookup = {h['domain']: h['headers'] for h in headers_list}\n    merged = []\n    for entry in original_dataset:\n        # CHANGE KEY BELOW",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "add_headers",
+        "kind": 2,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "def add_headers(headers_list, original_dataset):\n    # lookup table (dict)\n    headers_lookup = {h['domain']: h['headers'] for h in headers_list}\n    merged = []\n    for entry in original_dataset:\n        # CHANGE KEY BELOW\n        domain = entry['domain']\n        # check if domain is in scraped dicts\n        if domain in headers_lookup:\n            # create new dict with all fields from og entry, add headers",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "cnt",
+        "kind": 5,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "cnt = 1\nwith open(\"filtered_tranco_dataset.csv\", 'r', encoding=\"utf8\") as f:\n    dict_reader = DictReader(f)\n    dict_list = list(dict_reader)\n    print(dict_list[0])\n'''\nput csv entry (row) into json/dict done\nget domain name from dict key domæne\ncheck crt.sh for this domain name\nput response into field in dict that contains cert info",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "fields_list",
+        "kind": 5,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "fields_list = list(dict_list[0].keys())\ncert_dict_list = []\nno_cert_dict_list = []\nno_certs_csv = open(\"popular_no_certs.csv\", 'a', encoding=\"utf8\", newline='')\nwith open(\"popular_with_certs.csv\", 'a', encoding=\"utf8\", newline='') as certs_csv:\n    unblocked_writer = DictWriter(no_certs_csv, fieldnames=fields_list)\n    fields_list.append(\"Certifikat\")\n    blocked_writer = DictWriter(certs_csv, fieldnames=fields_list)\n    unblocked_writer.writeheader()\n    blocked_writer.writeheader()    ",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "cert_dict_list",
+        "kind": 5,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "cert_dict_list = []\nno_cert_dict_list = []\nno_certs_csv = open(\"popular_no_certs.csv\", 'a', encoding=\"utf8\", newline='')\nwith open(\"popular_with_certs.csv\", 'a', encoding=\"utf8\", newline='') as certs_csv:\n    unblocked_writer = DictWriter(no_certs_csv, fieldnames=fields_list)\n    fields_list.append(\"Certifikat\")\n    blocked_writer = DictWriter(certs_csv, fieldnames=fields_list)\n    unblocked_writer.writeheader()\n    blocked_writer.writeheader()    \n    for row in dict_list:",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "no_cert_dict_list",
+        "kind": 5,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "no_cert_dict_list = []\nno_certs_csv = open(\"popular_no_certs.csv\", 'a', encoding=\"utf8\", newline='')\nwith open(\"popular_with_certs.csv\", 'a', encoding=\"utf8\", newline='') as certs_csv:\n    unblocked_writer = DictWriter(no_certs_csv, fieldnames=fields_list)\n    fields_list.append(\"Certifikat\")\n    blocked_writer = DictWriter(certs_csv, fieldnames=fields_list)\n    unblocked_writer.writeheader()\n    blocked_writer.writeheader()    \n    for row in dict_list:\n        # status report",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "no_certs_csv",
+        "kind": 5,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "no_certs_csv = open(\"popular_no_certs.csv\", 'a', encoding=\"utf8\", newline='')\nwith open(\"popular_with_certs.csv\", 'a', encoding=\"utf8\", newline='') as certs_csv:\n    unblocked_writer = DictWriter(no_certs_csv, fieldnames=fields_list)\n    fields_list.append(\"Certifikat\")\n    blocked_writer = DictWriter(certs_csv, fieldnames=fields_list)\n    unblocked_writer.writeheader()\n    blocked_writer.writeheader()    \n    for row in dict_list:\n        # status report\n        if cnt % 100 == 0:",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "#scraper",
+        "kind": 5,
+        "importPath": "scraper.main",
+        "description": "scraper.main",
+        "peekOfCode": "#scraper = Scraper(webpages_list)\n#scraper.scrape()",
+        "detail": "scraper.main",
+        "documentation": {}
+    },
+    {
+        "label": "Scraper",
+        "kind": 6,
+        "importPath": "scraper.scraper",
+        "description": "scraper.scraper",
+        "peekOfCode": "class Scraper(): \n    '''\n    webpages = array or something in that order. change when data known\n    headers = \n    '''\n    def __init__(self, webpages=None):\n        if webpages == None:\n            raise Exception(\"webpages not loaded\")\n        self.webpages = webpages\n        # generate fake headers for request",
+        "detail": "scraper.scraper",
+        "documentation": {}
+    },
+    {
+        "label": "webpages",
+        "kind": 5,
+        "importPath": "scraper.scraper",
+        "description": "scraper.scraper",
+        "peekOfCode": "webpages = ['http://googldasdsadsadasdsade.com', 'http://www.aau.dk', 'https://www.facebook.com', 'https://www.discord.com']\nclass Scraper(): \n    '''\n    webpages = array or something in that order. change when data known\n    headers = \n    '''\n    def __init__(self, webpages=None):\n        if webpages == None:\n            raise Exception(\"webpages not loaded\")\n        self.webpages = webpages",
+        "detail": "scraper.scraper",
+        "documentation": {}
+    }
+]
