@@ -7,8 +7,8 @@ import ast
 import plotly.express as px
 
 continuous_features = ["shannon_entropy", "token_count", "hyphen_count", "length", 
-                       "subdomain_count", "mean_subdomain_length", "unique_char_count_domain", 
-                       "special_chars", "fraction_vowels", "fraction_digits", "suspicious_keywords_count"]
+                       "unique_char_count_domain", "special_chars", "fraction_vowels", 
+                       "fraction_digits", "suspicious_keywords_count"]
 
 boolean_features=["brand_inclusion", "idn_punycode", "subdomain_only_digits", "single_char_subdomains", "idn_hymoglyph_bool"]
 
@@ -43,7 +43,7 @@ def load(popular_path, malicious_path, unpopular_path):
     # Fill missing or NaN values
     # df = df.ffill()
     df['RegistrantLand'] = df['RegistrantLand'].fillna('Unknown') 
-    df['hosting_provider'] = df['hosting_provider'].fillna('Unknown')
+    df['hosting_asn'] = df['hosting_asn'].fillna('Unknown')
 
 
     return df
@@ -289,10 +289,10 @@ def main():
 
 
     # display registrant countries
-    registrant_countries(data)
+    #registrant_countries(data)
 
     # display hosting providers
-    hosting_providers(data)
+    #hosting_providers(data)
 
     #correlation(data)
 

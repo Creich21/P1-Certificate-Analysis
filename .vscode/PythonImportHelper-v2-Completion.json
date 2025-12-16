@@ -639,6 +639,31 @@
         "documentation": {}
     },
     {
+        "label": "confusables",
+        "importPath": "confusable_homoglyphs",
+        "description": "confusable_homoglyphs",
+        "isExtraImport": true,
+        "detail": "confusable_homoglyphs",
+        "documentation": {}
+    },
+    {
+        "label": "unicodedata",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unicodedata",
+        "description": "unicodedata",
+        "detail": "unicodedata",
+        "documentation": {}
+    },
+    {
+        "label": "process_domain",
+        "importPath": "extraction",
+        "description": "extraction",
+        "isExtraImport": true,
+        "detail": "extraction",
+        "documentation": {}
+    },
+    {
         "label": "Counter",
         "importPath": "collections",
         "description": "collections",
@@ -1456,7 +1481,7 @@
         "kind": 2,
         "importPath": "domain_analyzer.analysis_domain",
         "description": "domain_analyzer.analysis_domain",
-        "peekOfCode": "def main():\n    # read and Load dataset\n    popular_path= input(\"Enter path of popular dataset: \").strip()\n    phishing_path= input(\"Enter path of phishing dataset: \").strip()\n    unpopular_path= input(\"Enter path of unpopular dataset: \").strip()\n    data = load(popular_path, phishing_path, unpopular_path)\n    # display registrant countries\n    registrant_countries(data)\n    # display hosting providers\n    hosting_providers(data)",
+        "peekOfCode": "def main():\n    # read and Load dataset\n    popular_path= input(\"Enter path of popular dataset: \").strip()\n    phishing_path= input(\"Enter path of phishing dataset: \").strip()\n    unpopular_path= input(\"Enter path of unpopular dataset: \").strip()\n    data = load(popular_path, phishing_path, unpopular_path)\n    # display registrant countries\n    #registrant_countries(data)\n    # display hosting providers\n    #hosting_providers(data)",
         "detail": "domain_analyzer.analysis_domain",
         "documentation": {}
     },
@@ -1465,7 +1490,7 @@
         "kind": 5,
         "importPath": "domain_analyzer.analysis_domain",
         "description": "domain_analyzer.analysis_domain",
-        "peekOfCode": "continuous_features = [\"shannon_entropy\", \"token_count\", \"hyphen_count\", \"length\", \n                       \"subdomain_count\", \"mean_subdomain_length\", \"unique_char_count_domain\", \n                       \"special_chars\", \"fraction_vowels\", \"fraction_digits\", \"suspicious_keywords_count\"]\nboolean_features=[\"brand_inclusion\", \"idn_punycode\", \"subdomain_only_digits\", \"single_char_subdomains\", \"idn_hymoglyph_bool\"]\ndef load(popular_path, malicious_path, unpopular_path):\n    popular_df = pd.read_csv(popular_path)\n    phishing_df = pd.read_csv(malicious_path)\n    unpopular_df = pd.read_csv(unpopular_path)\n    popular_df['label'] = 0\n    phishing_df['label'] = 1",
+        "peekOfCode": "continuous_features = [\"shannon_entropy\", \"token_count\", \"hyphen_count\", \"length\", \n                       \"unique_char_count_domain\", \"special_chars\", \"fraction_vowels\", \n                       \"fraction_digits\", \"suspicious_keywords_count\"]\nboolean_features=[\"brand_inclusion\", \"idn_punycode\", \"subdomain_only_digits\", \"single_char_subdomains\", \"idn_hymoglyph_bool\"]\ndef load(popular_path, malicious_path, unpopular_path):\n    popular_df = pd.read_csv(popular_path)\n    phishing_df = pd.read_csv(malicious_path)\n    unpopular_df = pd.read_csv(unpopular_path)\n    popular_df['label'] = 0\n    phishing_df['label'] = 1",
         "detail": "domain_analyzer.analysis_domain",
         "documentation": {}
     },
@@ -1483,7 +1508,7 @@
         "kind": 2,
         "importPath": "domain_analyzer.extraction",
         "description": "domain_analyzer.extraction",
-        "peekOfCode": "def brand_inclusion(domain):\n    domain_lower= domain.lower()\n    return any(brand in domain_lower for brand in brands)\ndef detect_punycode(domain):\n    return domain.startswith(\"xn--\")\ndef detect_homoglyph(domain):\n    domain = domain.lower()\n    homoglyphs_found = []\n    homoglyph_dict = {}\n    #load file from source: https://github.com/codebox/homoglyph/tree/master",
+        "peekOfCode": "def brand_inclusion(domain):\n    domain_lower= domain.lower()\n    return any(brand in domain_lower for brand in brands)\ndef detect_punycode(domain):\n    return domain.startswith(\"xn--\")\ndef detect_homoglyph(domain):\n    domain = domain.lower()\n    scripts=set()\n    for char in domain:\n        if not char.isalpha():",
         "detail": "domain_analyzer.extraction",
         "documentation": {}
     },
@@ -1492,7 +1517,7 @@
         "kind": 2,
         "importPath": "domain_analyzer.extraction",
         "description": "domain_analyzer.extraction",
-        "peekOfCode": "def detect_punycode(domain):\n    return domain.startswith(\"xn--\")\ndef detect_homoglyph(domain):\n    domain = domain.lower()\n    homoglyphs_found = []\n    homoglyph_dict = {}\n    #load file from source: https://github.com/codebox/homoglyph/tree/master\n    with open(\"./chars.txt\", \"r\") as file:\n        lines= file.readlines()\n    for line in lines:",
+        "peekOfCode": "def detect_punycode(domain):\n    return domain.startswith(\"xn--\")\ndef detect_homoglyph(domain):\n    domain = domain.lower()\n    scripts=set()\n    for char in domain:\n        if not char.isalpha():\n            continue\n        # documents used scripts to detect later whether different scripts are used\n        scripts.add(unicodedata.name(char).split()[0])",
         "detail": "domain_analyzer.extraction",
         "documentation": {}
     },
@@ -1501,7 +1526,7 @@
         "kind": 2,
         "importPath": "domain_analyzer.extraction",
         "description": "domain_analyzer.extraction",
-        "peekOfCode": "def detect_homoglyph(domain):\n    domain = domain.lower()\n    homoglyphs_found = []\n    homoglyph_dict = {}\n    #load file from source: https://github.com/codebox/homoglyph/tree/master\n    with open(\"./chars.txt\", \"r\") as file:\n        lines= file.readlines()\n    for line in lines:\n        line = line.strip()\n        if not line or line.startswith('#'):",
+        "peekOfCode": "def detect_homoglyph(domain):\n    domain = domain.lower()\n    scripts=set()\n    for char in domain:\n        if not char.isalpha():\n            continue\n        # documents used scripts to detect later whether different scripts are used\n        scripts.add(unicodedata.name(char).split()[0])\n        if not char.isascii():\n            if confusables.is_confusable(char):",
         "detail": "domain_analyzer.extraction",
         "documentation": {}
     },

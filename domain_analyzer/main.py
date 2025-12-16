@@ -5,7 +5,7 @@ import json
 from dotenv import load_dotenv
 
 import pandas
-from .extraction import process_domain
+from extraction import process_domain
 
 load_dotenv()
 

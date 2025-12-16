@@ -9,6 +9,8 @@ import logging
 import csv
 import dns.resolver
 from datetime import datetime
+from confusable_homoglyphs import confusables
+import unicodedata
 
 
 brands=["dankort", "dsv", "danskebank", "jyskebank", "nordea", "nordisk", "saxo", "seb", "sydbank", "vestergaard", "santanderconsumer", "sparnord", "nemid",
@@ -47,32 +49,22 @@ def detect_punycode(domain):
 
 def detect_homoglyph(domain):
     domain = domain.lower()
-    homoglyphs_found = []
-    homoglyph_dict = {}
-
-    #load file from source: https://github.com/codebox/homoglyph/tree/master
-    with open("./chars.txt", "r") as file:
-        lines= file.readlines()
-
-    for line in lines:
-        line = line.strip()
-        if not line or line.startswith('#'):
-            continue
-        homoglyphs = line.split()
-        for char in homoglyphs:
-            if char not in homoglyph_dict:
-                homoglyph_dict[char] = set()
-            for other_char in homoglyphs:
-                if char != other_char:
-                    homoglyph_dict[char].add(other_char)
+    scripts=set()
 
     for char in domain:
-        if char in homoglyph_dict:
-            for homoglyph in homoglyph_dict[char]:
-                if homoglyph in domain and homoglyph != char:
-                    homoglyphs_found.append((char, homoglyph))
-    
-    return homoglyphs_found
+        if not char.isalpha():
+            continue
+
+        # documents used scripts to detect later whether different scripts are used
+        scripts.add(unicodedata.name(char).split()[0])
+
+        if not char.isascii():
+            if confusables.is_confusable(char):
+                return True
+    if len(scripts) > 1:
+        return True
+
+    return False
 
 def get_dns_ttl(domain):
     try:
